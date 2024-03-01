@@ -1,0 +1,17 @@
+{
+    "yourStats":{
+        "en":"Your Statistics",
+        "pl":"Twoje Statystyki",
+        "de":"Deine Statistiken"
+    },
+    "categoriesText":{
+        "en" :"All categories you've read",
+        "pl": "Wszystkie kategorie, jakie czytałeś",
+        "de": "Kategorien, die du gelesen hast"
+    },
+    "progressBookAmount":{
+        "en":"Progress and amount of read books",
+        "pl":"Postęp i ilość przeczytanych książek",
+        "de":"Fortschritt und Anzahl der gelesenen Bücher"
+    }
+}

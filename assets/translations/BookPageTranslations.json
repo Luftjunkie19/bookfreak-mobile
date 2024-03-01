@@ -1,0 +1,122 @@
+{
+  "buttonsTexts": {
+    "edit": {
+      "de": "Bearbeiten",
+      "en": "Edit",
+      "pl": "Edytuj"
+    },
+    "delete": {
+      "de": "Löschen",
+      "en": "Delete",
+      "pl": "Usuń"
+    },
+    "removeShelf": {
+      "de": "Ausm Regal loswerden",
+      "en": "Remove from your shelf",
+      "pl": "Usuń z półki"
+    },
+    "updateStatus": {
+      "de": "Lesestand aktualisieren",
+      "en": "Update Reading Status",
+      "pl": "Uaktualnij status czytania"
+    },
+    "addToShelf": {
+      "de": "Ins Regal stellen",
+      "en": "Add to your shelf",
+      "pl": "Dodaj do półki"
+    },
+    "rateBook": {
+      "de": "Bewerte das Buch",
+      "en": "Rate the book",
+      "pl": "Oceń książkę"
+    },
+    "publishBtn": {
+      "de": "Veröffentlichen",
+      "en": "Publish",
+      "pl": "Opublikuj"
+    }
+  },
+  "averadeateText": {
+    "de": "Durchschnittliche Bewertung",
+    "en": "Average Rate",
+    "pl": "Średnia ocena"
+  },
+  "shareText": {
+    "de": "Mitteilen",
+    "en": "Share",
+    "pl": "Udostępnij"
+  },
+  "addedBy": {
+    "de": "Hinzugefügt von",
+    "en": "Added by",
+    "pl": "Dodane przez"
+  },
+  "recensionsTo": {
+    "de": "Rezensionen",
+    "en": "Recensions",
+    "pl": "Recenzje"
+  },
+  "recensionsText":{
+    "de":"Rezensionen von",
+    "en":"Recensions of",
+    "pl":"Recenzje o"
+  },
+  "recensionLabel": {
+    "de": "Rezension",
+    "en": "Recension",
+    "pl": "Recenzja"
+  },
+  "recensionPlaceholder": {
+    "de": "Rezension schreiben...",
+    "en": "Enter Recension...",
+    "pl": "Napisz Recenzję..."
+  },
+  "authorText": {
+    "de": "Autor",
+    "en": "Author",
+    "pl": "Autor"
+  },
+  "andPersons": {
+    "singlePerson": {
+      "de": "liebt es.",
+      "en": "loves it.",
+      "pl": "uwielbia to."
+    },
+
+    "part1": {
+      "de": "und",
+      "en": "and",
+      "pl": "and"
+    },
+    "part2": {
+      "de": "andere Personen lieben es.",
+      "en": "other persons love it.",
+      "pl": "innych osób uwielbiają to."
+    }
+  },
+  "noRecensionYet": {
+    "de": "Keine Rezensionen bisher.",
+    "en": "No Recensions yet.",
+    "pl": "Brak recenzji do teraz."
+  },
+  "attempts":{
+    "en":"All Attempts",
+    "de":"Alle Versuche",
+    "pl":"Wszystkie Próby"
+  },
+  "yourAttempts":{
+    "en":"Your Attempts",
+    "de":"Deine Versuche",
+    "pl":"Twoje próby"
+  },
+  "showAll":{
+    "en":"Show all",
+    "de":"Zeige alle",
+    "pl":"Pokaż wszystkie"
+  },
+  "showMore":{
+    "en":"Show more",
+    "de":"Zeige mehr",
+    "pl":"Pokaż więcej"
+  }
+}

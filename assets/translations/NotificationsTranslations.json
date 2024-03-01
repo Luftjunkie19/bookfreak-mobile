@@ -1,0 +1,38 @@
+{
+  "titles": {
+    "notifiactions": {
+      "en": "Notifiactions",
+      "pl": "Powiadomienia",
+      "de": "Benachrichtigungen"
+    },
+    "requests": {
+      "en": "Requests",
+      "pl": "Wnioski/Prośby",
+      "de": "Anfragen"
+    }
+  },
+  "noNewStuff": {
+    "notifiactions": {
+      "en": "No new notifications available",
+      "pl": "Brak dostępnych nowych powiadomień",
+      "de": "Keine neuen Benachrichtigungen verfügbar"
+    },
+    "requests": {
+      "en": "No new requests available",
+      "pl": "Brak dostępnych nowych próśb",
+      "de": "Keine neuen Anfragen verfügbar"
+    }
+  },
+  "btns": {
+    "accept": {
+      "en": "Accept",
+      "pl": "Akceptuj",
+      "de": "Akzeptieren"
+    },
+    "decline": {
+      "en": "Decline",
+      "pl": "Odrzuć",
+      "de": "Ablehnen"
+    }
+  }
+}

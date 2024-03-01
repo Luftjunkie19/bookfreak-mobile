@@ -1,0 +1,107 @@
+{
+  "bookFilter": {
+    "all": {
+      "en": "All",
+      "de": "Alles",
+      "pl": "Wszystko"
+    },
+    "fiction": {
+      "en": "Fiction",
+      "de": "Fiktion",
+      "pl": "Fikcja"
+    },
+    "non-fiction": {
+      "en": "Non-fiction",
+      "de": "Sachliteratur",
+      "pl": "Literatura faktu"
+    },
+    "scienceFF": {
+      "en": "Science fiction and fantasy",
+      "de": "Science-Fiction und Fantasy",
+      "pl": "Fantastyka naukowa i fantasy"
+    },
+    "cayal": {
+      "en": "Children's and young adult literature",
+      "de": "Kinder- und Jugendliteratur",
+      "pl": "Literatura dziecięca i młodzieżowa"
+    },
+    "travelaal": {
+      "en": "Travel and adventure literature",
+      "de": "Reise- und Abenteuerliteratur",
+      "pl": "Literatura podróżnicza i przygodowa"
+    },
+    "popularScience": {
+      "en": "Popular science and popular history",
+      "de": "Populärwissenschaft und populäre Geschichte",
+      "pl": "Popularnonaukowa i popularnohistoryczna"
+    },
+    "selfHelp": {
+      "en": "Self-help and personal development",
+      "de": "Selbsthilfe und Persönlichkeitsentwicklung",
+      "pl": "Samopomoc i rozwój osobisty"
+    },
+    "history": {
+      "en": "History and culture",
+      "de": "Geschichte und Kultur",
+      "pl": "Historia i kultura"
+    },
+    "crime": {
+      "en": "Crime",
+      "de": "Krimis",
+      "pl": "Kryminały"
+    },
+
+    "artDesign": {
+      "en": "Art and design",
+      "de": "Kunst und Design",
+      "pl": "Sztuka i design"
+    },
+    "Business": {
+      "en": "Business and economics",
+      "de": "Wirtschaft und Wirtschaftswissenschaften",
+      "pl": "Biznes i ekonomia"
+    },
+    "Psychology": {
+      "en": "Psychology and philosophy",
+      "de": "Psychologie und Philosophie",
+      "pl": "Psychologia i filozofia"
+    },
+    "Health": {
+      "en": "Health and medicine",
+      "de": "Gesundheit und Medizin",
+      "pl": "Zdrowie i medycyna"
+    },
+    "Erotic": {
+      "en": "Erotic literature",
+      "de": "Erotische Literatur",
+      "pl": "Literatura erotyczna"
+    }
+  },
+  "bookSort": {
+    "Default": {
+      "en": "Default",
+      "de": "Normal",
+      "pl": "Normal"
+    },
+    "pagesDescending": {
+      "en": "Pages (descending)",
+      "de": "Seitenanzahl (absteigend)",
+      "pl": "Strony (malejąco)"
+    },
+    "pagesAscending": {
+      "en": "Pages (ascending)",
+      "de": "Seitenzahl (aufsteigend)",
+      "pl": "Stron (rosnąco)"
+    },
+    "timeDesc": {
+      "en": "Time (descending)",
+      "de": "Zeit (absteigend)",
+      "pl": "Czas (malejąco)"
+    },
+    "timeAsc": {
+      "en": "Time (ascending)",
+      "de": "Zeit (aufsteigend)",
+      "pl": "Czas (rosnąco)"
+    }
+  }
+}

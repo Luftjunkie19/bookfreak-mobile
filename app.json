@@ -1,30 +1,95 @@
 {
   "expo": {
-    "name": "bookfreak-mobile",
+    "name": "BookFreak Mobile",
     "slug": "bookfreak-mobile",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/Logo.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/GB-mcOkXgAAd99_-removebg-preview.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#4267B5"
     },
     "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "googleServicesFile": "./GoogleService-Info (2).plist",
+      "bundleIdentifier": "com.bookfreak.org",
+      "entitlements": {
+        "com.apple.developer.networking.wifi-info": true
+      },
+      "infoPlist": {
+        "SKAdNetworkItems": [
+          {
+            "SKAdNetworkIdentifier": "v9wttpbfk9.skadnetwork"
+          },
+          {
+            "SKAdNetworkIdentifier": "n38lu8286q.skadnetwork"
+          }
+        ]
+      }
     },
     "android": {
+      "googleServicesFile": "./google-services (6).json",
+      "package": "com.bookfreak.org",
+      "versionCode": 2,
       "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
+        "foregroundImage": "./assets/Logo.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "android.permission.RECORD_AUDIO",
+        "android.permission.INTERNET"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "scheme": "bookfreak-mobile",
+    "plugins": [
+      "@react-native-firebase/auth",
+      "@react-native-firebase/app",
+      "@react-native-google-signin/google-signin",
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+                "useFrameworks": "static"
+            }
+          }
+        ],
+        [
+          "react-native-fbsdk-next",
+          {
+            "appID": "917699232752922",
+          "clientToken": "cce642d3330f1ecb6bc6932715d7b589",
+          "displayName": "Bookfreak",
+          "scheme": "fb917699232752922"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "The app accesses your photos to let you share them with your friends."
+        }
+      ],
+      [
+        "@stripe/stripe-react-native",
+        {
+          "enableGooglePay": true
+        }
+      ],
+      "expo-localization",
+      "react-native-fbsdk-next"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "1f2875fc-ed51-4311-9100-2e8053aabdb8"
+      }
+    },
+    "owner": "luftjunkie_19"
   }
 }

@@ -1,0 +1,91 @@
+{
+  "competitionObject": {
+    "competitionsName":{
+      "en":"Competition's name...",
+      "pl":"Nazwa Konkursu...",
+      "de":"Wettbewerbname..."
+    },
+    "members": {
+      "en": "Members",
+      "de": "Mitglieder",
+      "pl": "Członków"
+    },
+    "createdBy":{
+      "en":"Created by: ",
+      "pl": "Stworzone przez: ",
+      "de": "Gegründet von: "
+    },
+
+    "prizeFor":{
+      "en":"Prize for the winner",
+      "de":"Preis für den Gewinner",
+      "pl":"Nagroda dla zwycięzcy"
+    },
+    "prizeDetails":{
+      "en":"Details about the prize",
+      "de":"Details zum Preis",
+      "pl":"Szczegóły o nagrodzie"
+    },
+    "membersAttending": {
+      "en": "Members attending",
+      "de": "teilnehmende Mitglieder",
+      "pl": "uczestniczących członków"
+    },
+    "prize":{
+      "en":"Prize",
+      "de":"Preis",
+      "pl":"Nagroda"
+    },
+    "expiration": {
+      "notExpired": {
+        "part1": {
+          "en": "Expires",
+          "de": "Läuft",
+          "pl": "Wygasa"
+        },
+        "part2": {
+          "notToday": {
+            "expiresIN": {
+              "en": "in",
+              "de": "in",
+              "pl": "za"
+            },
+
+            "en": "days",
+            "de": "Tagen ab",
+            "pl": "dni"
+          },
+          "today": { "en": "Today", "de": "Heute ab", "pl": "Dzisiaj" }
+        }
+      },
+      "rankingWinner":{
+        "winnerMsg":{
+            "en": "The competition is over. The winner is",
+            "de": "Der Wettbewerb ist beendet. Der Siede ist",
+            "pl": "Konkurs zakończył się. Zwycięzcą jest"
+        },
+        "secondPlace":{
+          "en":"Second Place",
+          "de":"Zweiter Platz",
+          "pl":"Drugie miejsce"
+        },
+        "thirtPlace":{
+          "en":"Third Place",
+          "de":"Dritter Platz",
+          "pl":"Trzecie miejsce"
+        }
+      },
+      "Expired": {
+        "part1": { "en": "Expired", "de": "Abgelaufen vor", "pl": "Wygasło" },
+        "part2": {
+          "notToday": {
+            "en": "days ago",
+            "de": "Tagen",
+            "pl": "dni temu"
+          },
+          "today": { "en": "Today", "de": "Heute", "pl": "Dzisiaj" }
+        }
+      }
+    }
+  }
+}

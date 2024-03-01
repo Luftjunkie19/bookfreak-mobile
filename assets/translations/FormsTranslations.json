@@ -1,0 +1,631 @@
+{
+  "competitionTypes":{
+    "first":{
+      "en":"First read, first served",
+      "pl":"Kto Pierwszy, Ten Lepszy",
+      "de":"Wer erster wird, wird erst bedient"
+    },
+    "second":{
+      "en":"Lift others, rise jointly",
+      "pl":"Podnoś innych, rośnij razem",
+      "de":"Hilf anderen auf, steigst du hoch zusammen"
+    },
+    "third":{
+      "en":"Teach to fish",
+      "pl":"Ucz aby łowić",
+      "de":"Lehrt den Fisch fischen"
+    }
+   },
+  "nothingSelected": {
+    "en": "Nothing selected yet.",
+    "pl": "Nie wybrano formularza.",
+    "de": "Kein Formular wurde noch ausgewählt."
+  },
+  "selectionQuery": {
+    "en": "What would you like to add",
+    "pl": "Co chciałbyś dodać",
+    "de": "Was möchten Sie hinzufügen"
+  },
+  "topText": {
+    "tests": {
+      "en": "Welcome to Test-creator !",
+      "pl": "Witamy w kreatorze testu !",
+      "de": "Willkommen bei Testersteller !"
+    },
+    "books": {
+      "en": "Add a new book and expand your knowledge !",
+      "pl": "Dodaj nową książkę i poszerzaj swoją wiedzę !",
+      "de": "Fügen Sie ein Buch hinzu und erweitern Sie ihres Wissen !"
+    },
+    "competitions": {
+      "en": "Show your might and dominate the others by reading books!",
+      "pl": "Pokaż siłę i zdominuj innych w czytaniu książek !",
+      "de": "Schauen Sie die Macht und herrschen Sie in dem Bücher lesen vor !"
+    },
+    "clubs": {
+      "en": "Form a Club!",
+      "pl": "Utwórz Klub !",
+      "de": "Gründen sie einen Verein !",
+      "underText": {
+        "en": "Create a community, that'll support you and keep reading !",
+        "pl": "Stwórz społeczność, która będzie Cię wspierać i czytała więcej  !",
+        "de": "Gründen sie eine Gemeinschaft, die Sie fördern und mehr lesen wird !"
+      }
+    },
+    "editBookText": {
+      "en": "Update book",
+      "pl": "Zaktualizuj książkę",
+      "de": "Buch aktualisieren",
+      "underText": {
+        "en": "Wanna introduce some changes? Here you are !",
+        "pl": "Chcesz dodać jakieś zmiany? Proszę bardzo !",
+        "de": "Wollen Sie irgendeine Änderungen einführen? Gar kein Problem !"
+      }
+    },
+    "editCompetition": {
+      "en": "Update competition",
+      "pl": "Zaktualizuj Konkurs",
+      "de": "Wettbewerb aktualisieren",
+      "underText": {
+        "en": "Wanna introduce some changes? Here you are !",
+        "pl": "Chcesz dodać jakieś zmiany? Proszę bardzo !",
+        "de": "Wollen Sie irgendeine Änderungen einführen? Gar kein Problem !"
+      }
+    },
+    "editClub": {
+      "en": "Update Club",
+      "pl": "Zaktualizuj Klub",
+      "de": "Lesegruppe aktualisieren"
+    },
+    "editProfile": {
+      "en": "Update User's Profile",
+      "pl": "Zaktualizuj Profil Użytkownika",
+      "de": "Benutzerprofil aktualisieren"
+    },
+    "selectNationality": {
+      "en": "Choose your nationality",
+      "pl": "Wybierz swoją narodowość",
+      "de": "Wähle deine Nationalität aus"
+    }
+  },
+
+  "userFields": {
+    "nickname": {
+      "en": "Nickname",
+      "pl": "Nazwa Użytkownika",
+      "de": "Benutzername"
+    },
+    "chooseAvatar": {
+      "en": "Choose Avatar",
+      "pl": "Wybierz Avatar",
+      "de": "Avatar Auswählen"
+    },
+    "password": {
+      "en": "Password",
+      "pl": "Hasło",
+      "de": "Passwort"
+    }
+  },
+
+  "bookTitleInput": {
+    "label": {
+      "en": "Title",
+      "pl": "Tytuł",
+      "de": "Titel"
+    },
+    "placeholder": {
+      "en": "Enter title...",
+      "pl": "Podaj Tytuł...",
+      "de": "Titel eingeben..."
+    }
+  },
+  "bookAuthorInput": {
+    "label": {
+      "en": "Author",
+      "pl": "Autor",
+      "de": "Autor"
+    },
+    "placeholder": {
+      "en": "Enter author...",
+      "pl": "Podaj autora...",
+      "de": "Autor eingeben..."
+    }
+  },
+  "bookCategoryInput": {
+    "label": { "en": "Genre", "pl": "Gatunek", "de": "Gattung" }
+  },
+  "selectImgBtn": {
+    "label": {
+      "en": "Book's Cover",
+      "pl": "Okładka Książki",
+      "de": "Buchumschlag"
+    },
+    "text": {
+      "en": "Select Image",
+      "pl": "Wybierz zdjęcie",
+      "de": "Bild Auswählen"
+    }
+  },
+  "pagesAmountInput": {
+    "label": {
+      "en": "Pages quantity",
+      "pl": "Ilość stron",
+      "de": "Seitenmenge"
+    },
+    "placeholder": {
+      "en": "Enter pages quantity...",
+      "pl": "Podaj ilość stron...",
+      "de": "Seitenmenge eingeben"
+    }
+  },
+  "hasStarted": {
+    "query": {
+      "en": "Did you start reading this book",
+      "pl": "Czy zacząłęś czytać tę książkę",
+      "de": "Haben Sie schon angefangen das Buch zu lesen"
+    }
+  },
+  "readPagesInput": {
+    "label": {
+      "en": "Read pages quantity",
+      "pl": "Ilość przeczytaych stron",
+      "de": "Gelesene Seitenmenge"
+    },
+    "placeholder": {
+      "en": "Enter read pages quantity",
+      "pl": "Podaj ilość przeczytaych stron",
+      "de": "Gelesene Seitenmenge eingeben"
+    }
+  },
+  "hasFinished": {
+    "query": {
+      "en": "Have you already finished reading this book",
+      "pl": "Czy skończyłeś czytać tę książkę",
+      "de": "Haben Sie schon beendet das Buch zu lesen"
+    }
+  },
+  "descriptionTextarea": {
+    "label": {
+      "en": "Description",
+      "pl": "Opis",
+      "de": "Beschreibung"
+    },
+    "placeholder": {
+      "en": "Enter description...",
+      "pl": "Napisz Opis...",
+      "de": " Beschreibung eingeben"
+    }
+  },
+  "clubsNameInput": {
+    "label": {
+      "en": "Club's name",
+      "pl": "Nazwa klubu",
+      "de": "Lesegruppenname"
+    },
+    "placeholder": {
+      "en": "Enter Club's name...",
+      "pl": "Napisz nazwę klubu...",
+      "de": "Lesegruppennamen eingeben"
+    }
+  },
+  "clubsLogoInput": {
+    "label": {
+      "en": "Club's Logo",
+      "pl": "Nazwa Logo",
+      "de": "LesegruppenLogo"
+    }
+  },
+  "competitionCategory": {
+    "label": {
+      "en": "Competion's Category",
+      "pl": "Kategoria konkursu",
+      "de": "Kategorie des Wettbewerbes"
+    }
+  },
+  "expirationDateInput": {
+    "label": {
+      "en": "Expiration Date",
+      "pl": "Data wygaśnięcia",
+      "de": "Ablaufsdatum"
+    }
+  },
+  "membersInput": {
+    "label": {
+      "en": "Members",
+      "pl": "Członkowie",
+      "de": "Mitglieder"
+    }
+  },
+  "requiredPagesToJoin": {
+    "label": {
+      "en": "Required read pages quantity",
+      "pl": "Wymagana ilość przeczytanych stron",
+      "de": "Erforderliche Menge gelesenen Bücher"
+    },
+    "placeholder": {
+      "en": "Enter quantity...",
+      "pl": "Podaj ilość...",
+      "de": "Menge eingeben..."
+    }
+  },
+  "updateBtn": {
+    "en": "Update",
+    "pl": "Zaktualizuj",
+    "de": "Aktualisieren"
+  },
+
+  "signUpForm": {
+    "topText": {
+      "en": "Sign up to join us !",
+      "pl": "Zarejestuj się, aby dołączyć !",
+      "de": "Registriere dich, um beizutreten !"
+    },
+    "haveAccount":{
+      "en": "I have an account",
+      "de":"Ich habe schon ein Konto",
+      "pl":"Mam już konto"
+    },
+    "btnText": {
+      "en": "Sign up",
+      "pl": "Zarejestuj się",
+      "de": "Registrieren"
+    },
+
+    "optionsText": {
+      "en": "You can also sign up with:",
+      "pl": "Zarejestruj się przez:",
+      "de": "Registriere dich per:"
+    }
+  },
+  "signInForm": {
+    "topText": {
+      "en": "Login to join us back !",
+      "pl": "Zaloguj się, aby do nas dołączyć ponownie !",
+      "de": "Logge dich ein, um uns wieder beizutreten !"
+    },
+    "btnText": {
+      "en": "Sign in",
+      "pl": "Zaloguj się",
+      "de": "Einloggen"
+    },
+
+    "optionsText": {
+      "en": "You can also sign in with:",
+      "pl": "Zaloguj się przez:",
+      "de": "Logge dich ein per:"
+    }
+  },
+  "signingOptions": {
+    "phone": {
+      "en": "Phone",
+      "pl": "Telefon",
+      "de": "Handynummer"
+    },
+    "passwordForgotten": {
+      "en": "Forgot password?",
+      "pl": "Zapmniałeś hasła?",
+      "de": "Passwort vergessen?",
+
+      "underText": {
+        "en": "No worries everyone sometimes forgets 'bout something !",
+        "pl": "Bez obaw, każdy czasem czegoś zapomni.",
+        "de": "Keine Sorgen, jeder vergisst manchmal was !"
+      },
+
+      "sendEmail": {
+        "en": "Send Email",
+        "pl": "Wyślij Email",
+        "de": "Email Senden"
+      },
+
+      "verifyBtn": {
+        "en": "Go to verify",
+        "pl": "Przejdź do Weryfikacji",
+        "de": "Verifizieren"
+      },
+      "verificationCode": {
+        "en": "Verification Code",
+        "pl": "Kod Weryfikacyjny",
+        "de": "Verifizierungscode"
+      },
+
+      "verificationText": {
+        "en": "Verify and enjoy your freakness !",
+        "pl": "Zweryfikuj się i ciesz się swoim wariactem !",
+        "de": "Verifiziere dich und Genieße deine Freakness !"
+      },
+      "provideNumber": {
+        "en": "Provide the number and go to verify !",
+        "pl": "Wprowadź numer i zweryfikuj się",
+        "de": "Gib deine Handynummer ein und Verifiziere dich !"
+      },
+      "fillTheFields": {
+        "en": "Fill the fields and verify !",
+        "pl": "Wypełnij pola i zweryfikuj się",
+        "de": "Fülle die Felde aus und Verifiziere dich !"
+      }
+    }
+  },
+  "submit": {
+    "en": "Submit",
+    "pl": "Potwierdź",
+    "de": "Bestätigen"
+  },
+  "testFields": {
+    "testName": {
+      "label": {
+        "en": "Test name:",
+        "pl": "Nazwa testu:",
+        "de": "Testname: "
+      },
+      "placeholder": {
+        "en": "Enter a test name...",
+        "pl": "Wpisz nazwę testu...",
+        "de": "Testnamen eingeben..."
+      }
+    },
+    "bookSelection": {
+      "en": "Select a book",
+      "pl": "Wybierz książkę",
+      "de": "Buch auswählen"
+    },
+    "buttonText": {
+      "addNewQuery": {
+        "en": "Add new Query",
+        "pl": "Dodaj nowe pytanie",
+        "de": "Neue Frage erstellen"
+      },
+      "createBtn": {
+        "en": "Create",
+        "pl": "Stwórz",
+        "de": "Erstellen"
+      },
+      "createTestBtn": {
+        "en": "Create Test",
+        "pl": "Stwórz Test",
+        "de": "Test Erstellen"
+      },
+      "anotherQuestion": {
+        "en": "Another Answer",
+        "pl": "Następna odpowiedź",
+        "de": "Nächste Antwort"
+      }
+    },
+    "questionLabel": {
+      "en": "Question:",
+      "pl": "Pytanie:",
+      "de": "Frage:"
+    },
+    "queries":{
+      "en":"Queries",
+      "pl":"Pytania",
+      "de":"Fragen"
+    },
+
+    "possibleAnswers": {
+      "en": "Possible answers:",
+      "pl": "Możliwe odpowiedzi:",
+      "de": "Mögliche Antworten:"
+    }
+  },
+  "playBtn": {
+    "en": "Play",
+    "pl": "Zagraj",
+    "de": "Spielen"
+  },
+  "queries": {
+    "en": "Queries",
+    "pl": "Pytania",
+    "de": "Fragen"
+  },
+  "allAttempts": {
+    "en": "All Attempts",
+    "pl": "Wszystkie Próby",
+    "de": "Alle Versuche"
+  },
+  "yourAttempts": {
+    "en": "Your Queries",
+    "pl": "Twoje Próby",
+    "de": "Deine Versuche"
+  },
+ "updateReaderState":{
+  "topText":{
+    "en":"Update reading state",
+    "pl":"Zaktualizuj stan czytania",
+    "de":"Lese-Status aktualisieren"
+  },
+  "bottomText":{
+    "en":"Wanna add some changes? Here you are !",
+    "pl":"Chcesz dodać jakieś zmiany? Proszę bardzo!",
+    "de":"Willst du einige Änderungen hinzufügen? Bitte sehr!"
+  }
+ },"generalInfo":{
+  "en":"General Information",
+  "de":"Allgemeine Informationen",
+  "pl":"Ogólne Informacje"
+ },
+ "nationality":{
+  "en":"nationality",
+  "pl":"narodowość",
+  "de":"Nationalität"
+ },
+ "currentCreditsState":{
+  "en":"Available credits",
+  "pl":"Dostępne środki",
+  "de":"Verfügbares Guthaben"
+ },
+ "financialManagment":{
+  "en":"Financial Managment",
+  "pl":"Zarządzanie Finansami",
+  "de":"Finanzmanagement"
+ },
+ "visibilityMode":{
+  "en":"Visibility Mode",
+  "pl":"Tryb widoczności",
+  "de":"Sichtbarkeitsmodus"
+ },
+ "replenishYourAccount":{
+  "en":"Replenish your account",
+  "pl":"Uzupełnij swoje środki",
+  "de":"Fülle dein Konto auf"
+ },
+ "provideFinancialData":{
+  "en":"Provide essential financial data",
+  "pl":"Podaj podstawowe dane finansowe",
+  "de":"Gib wichtige finanziellen Daten an"
+ },
+ "finishText":{
+  "en":"Finish",
+  "pl":"Zakończ",
+  "de":"Abschließen"
+ },
+ "moveToDashboardText":{
+  "en":"Move to Dashboard",
+  "pl":"Przejdź do pulpitu nawigacyjnego",
+  "de":"Gehe zum Dashboard"
+ },
+ "payoutText":{
+  "en":"Payout",
+  "pl":"Wypłata",
+  "de":"Auszahlung"
+ },
+ "smallNote":{
+  "en":"Note ! Changing the nationality won't change the currency and country in your financial account.",
+  "pl":"Uwaga! Zmiana narodowości nie zmieni waluty i kraju w Twoim koncie finansowym",
+  "de":"Hinweis: Ändern Sie die Nationalität nicht, wird die Währung und das Land in Ihrem Finanziellem Konto."
+ },
+ "countryOfBookRelease":{
+  "en":"Country of book release",
+  "pl":"Kraj wydania książki",
+  "de":"Land der Buchveröffentlichung"
+ },
+ "publisher":{
+  "en":"Publisher",
+  "pl":"Wydawnictwo",
+  "de":"Verlag"
+ },
+ "yearOfRelease":{
+  "en":"Year of release",
+  "pl":"Rok wydania",
+  "de":"Jahr der Veröffentlichung"
+ },
+ "detailedInfo":{
+  "en":"Detailed information",
+  "pl":"Szczegółowe informacje",
+  "de":"Details"
+ },
+ "userInfo":{
+  "en":"User Information",
+  "pl":"Informacja użytkownika",
+  "de":"Benutzerdaten"
+ },
+ "moveToBook":{
+  "en":"move to book",
+  "pl":"przenieś do książki",
+  "de":"wechseln zur Buchseite"
+ },
+ "placeHoldersCollections":{
+  "testName":{
+    "en":"Test Name",
+    "pl":"Nazwa testu",
+    "de":"Testname"
+  },
+  "competitionsName":{
+    "en":"Competition name",
+    "pl":"Nazwa turnieju",
+    "de":"Wettbewerbname"
+  },
+  "clubsName":{
+    "en":"Club name",
+    "pl":"Nazwa klubu",
+    "de":"Vereiname"
+  },
+  "booksTitle":{
+    "en":"Book title",
+    "pl":"Tytuł książki",
+    "de":"Buchtitel"
+  }
+ },
+ "competitionsPrize":{
+  "en":"Prize",
+  "pl":"Nagroda",
+  "de":"Preis"
+ },
+ "item":{
+  "en":"Item",
+  "pl":"Przedmiot",
+  "de":"Gegenstand"
+ },
+ "money":{
+  "en":"Money",
+  "pl":"Pieniądze",
+  "de":"Geld"
+ },
+ "essentialInfo":{
+  "en":"Essential information",
+  "pl":"Podstawowe informacje",
+  "de":"Notwendige Angaben"
+ },
+ "prizeMoneyAmountInYourCurrency":{
+  "en":"The amount of the prize money in your currency: ",
+  "pl":"Kwota nagradzająca w Twojej walucie: ",
+  "de":"Die Preisgeldmenge in Ihrer Währung: "
+ },
+ "prizeDetails":{
+  "en":"Prize Details",
+  "pl":"Szczegóły o nagrodzie",
+  "de":"Preisdetails"
+ },
+ "book":{
+  "en":"Book",
+  "pl":"Książka",
+  "de":"Buch"
+ },
+ "ticket":{
+  "en":"Ticket",
+  "pl":"Bilet",
+  "de":"Ticket/Eintrittskarte"
+ },
+ "inviteSomeUsers":{
+  "en":"Invite some users",
+  "pl":"Zaproś kilku użytkowników",
+  "de":"Lade einige Benutzer ein"
+ },
+ "fullfillData":{
+  "first":{
+    "en":"Register",
+    "pl":"Zarejestruj się",
+    "de":"Registrieren"
+  }, 
+  "second":{
+    "en":"Set nationality",
+    "pl":"Ustaw narodowość",
+    "de":"Nationalität festlegen"
+  },
+  "third":{
+    "en":"Set Financial data",
+    "pl":"Ustaw dane finansowe",
+    "de":"Finanzielle Daten angeben"
+  }
+},
+"provide":{
+  "en":"Provide ",
+  "pl":"Podaj ",
+  "de":"Angeben"
+},
+"info":{
+  "en":" If you get redirected, try to create a new link, clicking button below. Btw, the financial data is needed to take part in money competitions",
+  "pl":" Jeśli zostaniesz przekierowany z powrotem tutaj, spróbuj stworzyć nowy link klikając przycisk. Dane finansowe są potrzebne do m.in. brania udziału w pieniężnych konkursach.",
+  "de":"Wenn Sie hier weitergeleitet werden, versuchen Sie, einen neuen Link zu erstellen. Die Finanzielle Angaben sind nötig, falls Sie an einem Geldwettbewerb teilnehmen wollen."
+}, 
+"askLater":{
+  "en":"Ask later",
+  "pl":"Zapytaj później",
+  "de":"Frag später"
+},
+"noResults":{
+  "en":"No results found.",
+  "pl":"Nie znaleziono wyników.",
+  "de":"Keine Ergebnisse gefunden."
+}
+}

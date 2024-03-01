@@ -1,0 +1,89 @@
+{
+"moneyError":{
+  "en":"You haven't provided financial data yet. If you don't do it, you won't be able to topup your account, take part in competitions with money and create competitions with money.",
+  "de":"Sie haben bis jetzt keine finanzielle Angaben eingegeben. Falls sie die Angaben nicht eingeben, wird Ihnen nicht ermöglicht Ihren mit dem Geld auffzufüllen, an Wettbewerben, bei denen der Preis Geld ist teilnehmen und auch so einen Wettbewerb zu schaffen.",
+  "pl":"Nie wprowadziłeś danych finansowych, jeśli tego nie zrobisz, nie będziesz miał dostępu do opcji związanych z pieniędzmi."
+},
+"nationalityError":{
+  "en":"You haven't set an nationality yet. You can do it by editing the profile",
+  "de":"Sie haben Ihre Nationalität noch nicht angegeben, Sie können sie indem Sie das Profil bearbeiten.",
+  "pl":"Nie podałeś narodowości jeszcze, możesz to zrobić poprzez edycję profilu."
+},
+
+
+  "heroSection": {
+    "title": {
+      "en": "Welcome to BookFreak",
+      "de": "Willkommen bei BookFreak",
+      "pl": "Witaj w BookFreak"
+    },
+    "description": {
+      "en": "The place with society of real Freaks. Join any competition to face with readers like you and to win prizes. Attend Clubs to communicate with your friends or other bookfreaks. Find books, you haven't heard about and enjoy your time here.",
+      "de": "Der Ort mit der Community der echten Freaks. Nimm an einem Wettbewerb teil, um die Stirn den Lesern wie Du zu bieten und die Preise zu gewinnen. Tritt einen Verein bei, sich mit deinen Freunden oder anderen bookfreaks unterhalten zu können. Finde Bücher, darüber du nie gehört hast und Genieße die Zeit hier.",
+      "pl": "To miejsce z społecznością prawdziwych Freaków. Dołącz do konkursu, aby zmierzyć się z czytelnikami jak ty i wygraj nagrody. Dołącz do klubów, żeby komunikować się ze znajomymi lub innymi bookfreakami. Znajdź książki, o których nie słyszałeś i ciesz się swoim czasem spędzonym tutaj."
+    },
+    "button": {
+      "en": "Explore more",
+      "de": "Entdecke mehr",
+      "pl": "Odkryj więcej"
+    }
+  },
+  "homePage": {
+    "explorationOptions": {
+      "title": {
+        "en": "Things you can explore here:",
+        "de": "Sachen, die du hier entdecken kannst:",
+        "pl": "Rzeczy, jakie możesz tu odkryć:"
+      },
+      "option1": {
+        "en": "Books",
+        "de": "Bücher",
+        "pl": "Książki"
+      },
+      "option2": {
+        "en": "Tests",
+        "de": "Tests",
+        "pl": "Testy"
+      },
+      "option3": {
+        "en": "Competitions",
+        "de": "Wettbewerbe",
+        "pl": "Konkursy"
+      },
+      "option4": {
+        "en": "Reading Groups",
+        "de": "Lesegruppen",
+        "pl": "Kluby Czytelników"
+      }
+    },
+    "recentTexts": {
+      "books": {
+        "en": "Recently Added Books",
+        "de": "Zuletzt hinzugefügte Bücher",
+        "pl": "Ostatnie książki"
+      },
+      "competitions": {
+        "en": "Recently Created Competitions",
+        "de": "Zuletzt Erstellte Wettbewerbe",
+        "pl": "Ostatnie konkursy"
+      },
+      "clubs": {
+        "en": "Recently created Clubs",
+        "de": "Zuletzt erstellte Lesegruppen",
+        "pl": "Ostatnie kluby"
+      }
+    },
+    "bookObject": {
+      "pages": {
+        "en": "Pages",
+        "de": "Seiten",
+        "pl": "Strony"
+      },
+      "by": {
+        "en": "By",
+        "de": "Von",
+        "pl": "Od"
+      }
+    }
+  }
+}

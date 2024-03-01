@@ -1,0 +1,15 @@
+export const bgColor = "rgb(0,0,0)";
+export const primeColor= "#1a2339";
+export const accColor= "#4267B5";
+export const darkRed= "#800000";
+export const imgCover= "rgba(0, 0, 0,0.55)";
+export const userColumnBgCol= "rgba(0, 0, 0,0.15)";
+export const spotify= "#1DB954";
+export const discord= "#424549";
+export const youtube= "#FF0000";
+export const facebook= "#4267B2";
+export const github= "#333";
+export const editBtnColor='#0C97ED';
+export const lightModeCol= "#F5F5F5";
+export const modalAccColor= "rgba(66, 103, 181, 0.5)";
+export const modalPrimeColor= "rgba(26,35,57,0.95)";

@@ -1,0 +1,17 @@
+{
+    "topText":{
+        "en":"You can Top up your account here !",
+        "pl":"Możesz zasilić swoje konto tutaj !",
+        "de":"Hier kannst du dein Konto aufladen !"
+    },
+    "downText":{
+        "en":"Select an amount you want to replenish your account with and enjoy (From the amount will be taken a fee of 1 PLN + 7.5% in order to maintain the system)!",
+        "de":"Wähle einen Betrag aus, um dein Konto mit Guthaben aufzufüllen und genießen (Vom Betrag wird ein Gebühr in Höhe von 1 PLN + 7.5% des Betrags abgehoben, den System beizubehalten und die Kosten zu bedecken) !",
+        "pl":"Wybierz kwote, jaką chcesz zasilić konto i rozkoszuj się (Od kwoty będzie pobrana kwota w wysokości 1 PLN + 7.5% kwoty, aby utrzymać System i pokryć koszty)!"
+    },
+    "buyBtnText":{
+        "en":"Toup",
+        "de":"Auffüllen",
+        "pl":"Zasil"
+    }
+}

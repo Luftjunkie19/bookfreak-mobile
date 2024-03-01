@@ -1,0 +1,10 @@
+<resources>
+  <string name="app_name">bookfreak-mobile</string>
+  <string name="expo_splash_screen_resize_mode" translatable="false">contain</string>
+  <string name="expo_splash_screen_status_bar_translucent" translatable="false">false</string>
+  <string name="expo_system_ui_user_interface_style" translatable="false">light</string>
+  <string name="ExpoLocalization_supportsRTL" translatable="false">undefined</string>
+  <string name="facebook_app_id">917699232752922</string>
+  <string name="facebook_client_token">cce642d3330f1ecb6bc6932715d7b589</string>
+  <string name="fb_login_protocol_scheme">fb917699232752922</string>
+</resources>

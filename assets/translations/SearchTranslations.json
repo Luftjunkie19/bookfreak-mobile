@@ -1,0 +1,58 @@
+{
+  "title": {
+    "en": "What would you like to find?",
+    "pl": "Co chciałbyś znaleźć?",
+    "de": "Was wollen Sie finden?"
+  },
+  "options": {
+    "users": {
+      "en": "User",
+      "pl": "Użytkownika",
+      "de": "Nutzer"
+    },
+    "books": {
+      "en": "Book",
+      "pl": "Książkę",
+      "de": "Buch"
+    }
+  },
+  "searchInput": {
+    "label": {
+      "en": "Search for users",
+      "pl": "Szukaj użytkownika",
+      "de": "Benutzer suchen"
+    },
+
+    "labelBooks": {
+      "en": "Search for book",
+      "pl": "Szukaj książki",
+      "de": "Buch suchen"
+    },
+    "placeholderBooks": {
+      "en": "Enter book's tittle",
+      "pl": "Podaj tytuł książki",
+      "de": "Titel des Buches eingeben"
+    },
+
+    "placeholderUsers": {
+      "en": "Enter user's nickname",
+      "pl": "Podaj nickname użytkownika",
+      "de": "Nickname eingeben"
+    }
+  },
+  "searchedParam": {
+    "en": "Searched param is:",
+    "pl": "Szukana fraza to:",
+    "de": "Gesuchter parameter ist:"
+  },
+  "noResults": {
+    "en": "No results for:",
+    "pl": "Brak wyników dla:",
+    "de": "Keine Ergebnisse für:"
+  },
+  "noResultsText":{
+        "en": "No results...",
+    "pl": "Brak wyników...",
+    "de": "Keine Ergebnisse..."
+  }
+}

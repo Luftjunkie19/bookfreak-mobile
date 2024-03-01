@@ -1,0 +1,57 @@
+{
+  "clubObject": {
+    "createdBy":{
+      "en":"Created by:",
+      "pl":"Utworzone przez:",
+      "de":"Gegründet von: "
+    },
+    "members": {
+      "en": "Members",
+      "de": "Mitglieder",
+      "pl": "Członków"
+    },
+    "required":{
+      "en":"Required: ",
+      "de":"Erfordert: ",
+      "pl":"Wymagane:"
+    },
+    "pages":{
+      "en":"Pages",
+      "de":"Seiten",
+      "pl":"Strony"
+    },
+
+    "quantity": {
+      "one": { "en": "club", "de": "Lesegruppe", "pl": "klub" },
+      "more": { "en": "clubs", "de": "Lesegruppen", "pl": "kluby" }
+    },
+    "founded": {
+      "one": {
+        "en": "has been founded",
+        "de": "wurde gegründet",
+        "pl": "został stworzony"
+      },
+      "more": {
+        "en": "have been founded",
+        "de": "wurden gegründet",
+        "pl": "zostały stworzone"
+      }
+    },
+
+    "clubsName": {
+      "en": "Club's name",
+      "de": "Vereinsname",
+      "pl": "Nazwa klubu"
+    },
+    "community": {
+      "en": "Community",
+      "de": "Gemeinschaft",
+      "pl": "Społeczność"
+    },
+    "pagesRequiredText": {
+      "en": "Read pages required to join",
+      "de": "Erforderliche Menge der gelesenen Seiten, um beizutreten",
+      "pl": "Wymagana ilość przeczytanych stron aby dołączyć"
+    }
+  }
+}

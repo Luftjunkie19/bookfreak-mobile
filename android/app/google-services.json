@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "389109624627",
+    "firebase_url": "https://bookfreak-954da-default-rtdb.firebaseio.com",
+    "project_id": "bookfreak-954da",
+    "storage_bucket": "bookfreak-954da.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:389109624627:android:16fc4ff2b75ff6a9c31846",
+        "android_client_info": {
+          "package_name": "com.bookfreak.org"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "389109624627-f4onobnasj5qtktp8s9cjho763kh3v57.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCuaElenS4iEOCHp7X1GhihCZMK3rZkWU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "389109624627-f4onobnasj5qtktp8s9cjho763kh3v57.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

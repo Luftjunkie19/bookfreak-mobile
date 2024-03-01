@@ -1,0 +1,199 @@
+{
+"WelcomeScreenTopText":{
+    "first":{
+        "en":"Welcome",
+        "de":"Willkommen",
+        "pl":"Witamy"
+    },
+    "second":{
+        "en": "to",
+        "de":"bei",
+        "pl":"w"
+    },
+    "third":"BookFreak",
+    "swipeRight":{
+        "en":"Go right",
+        "de":"Rechts Gehen",
+        "pl":"Idź w prawo"
+    },
+   "text":{
+    "top":{
+        "en":"I am glad to have you as a guest here !",
+        "de":"Es freut uns, dass Wir Sie bei uns bewirten können!",
+        "pl":"Cieszę się, że możemy gościć u nas !"
+    },
+    "description":{
+        "en":"In this welcoming section, I would like to succinctly tell you more about this project. Are you ready? So let's swipe right",
+        "de": "In dieser Willkommen Abteilung, möchte ich Ihnen kurz und bündig mehr über dies Projekt mitteilen. Sind Sie bereit ? Na dann, wischen Sie mal rechts",
+        "pl":"W tej powitalnej sekcji, chciałbym przybliżyć krótko i zwięźle powiedzieć więcej o tym projekcie ? Jesteś Gotowy? No to, przesuń palcem w prawo"
+
+    }
+   }
+},
+"secondScreen":{
+    "first":{
+        "en":"So",
+        "de": "Also",
+        "pl":"Także"
+    },
+    "second":{
+        "en":"what actually is",
+        "de": "was ist eigentlich",
+        "pl": "czym właściwie jest"
+    },
+    "desciption":{
+        "en":"Is an innovative app, which resolves an predicament of every Books' reader, where you can update your reading state of some book and also socialize with others. Not only BookFreak enables you that, but you can also compete with others for an prize like. ( Tickets, Books, but also Money !). If some book is missing, you can normally add it without any issue",
+        "de":"Ist eine innovative App, die ein Dillema jedes Buchlesers löst. In der App, kannst du den Stand eines Buches aktualisieren und auch sich mit anderen Leuten unterhalten. Nicht nur ermöglicht es dir BookFreak, sondern auch kannst du mit anderen um einen Preis wie (Eintrittskarten, Bücher, aber auch das Geld !) Wettbewerben. Falls ein Buch in unserer App fehlt, kannst du es problemlos hinzufügen ",
+        "pl":"Jest innowacyjną aplikacją, rozwiązująca kłopot każdego czytelnika. W naszej aplikacji, możesz aktualizować status przeczytania książki i komunikować się z innymi. Nie tylko to umożliwia BookFreak, lecz również konkurowanie z innymi o nagrody w konkusach, jak (Bilety, Książki lub też Pieniądze !). Jeśli jakiejś książki brakuje w naszej aplikacji, możesz bez problemu ją dodać"
+}
+},
+"thirdScreen":{
+    "topText":{
+        "en":"If you want to join",
+        "de":"Falls du uns beitreten möchtest",
+        "pl":"Jeśli chcesz dołączyć"
+    },
+    "bottom":{
+        "en":"Click one of buttons below",
+        "de":"Clicke auf einen der Buttons unten",
+        "pl":"Kliknij na jeden z poniższych przycisków"
+    },
+    "buttonTexts":{
+        "signUp":{
+            "en":"Sign Up",
+            "de":"Registrieren",
+            "pl":"Zarejestruj się"
+        },
+        "or":{
+            "en":"Or",
+            "de":"Oder",
+            "pl":"Albo"
+        },
+        "signIn":{
+            "en":"Sign In",
+            "de":"Einloggen",
+            "pl":"Zaloguj się"
+        }
+    }
+},
+    "aboutSection": {
+        "TopText": {
+            "en": "Hello And Welcome",
+            "de": "Hallo und Herzlich Willkommen",
+            "pl": "Witam Serdecznie"
+        },
+        "description": {
+            "en": "My name is Łukasz, I'm 19 years old and I created BookFreak, because something was missing for me in the books industry. There were some book's forums etc. However it was not that, what I was looking for. I initialized this project in February 2023, however the work on it not always was possible. Because of complications, I had at school, because I wanted to develop this project and also because of my mental collapse at some point.",
+            "de": "Mein Name ist Łukasz, ich bin 19 Jahre alt und ich habe BookFreak erstellt, weil mir etwas in der Buchbranche fehlte. Es gab einige Buchforen usw. Allerdings war es nicht das, wonach ich gesucht habe. Ich habe dieses Projekt im Februar 2023 initiiert, aber die Arbeit daran war nicht immer möglich. Aufgrund von Komplikationen in der Schule, weil ich dieses Projekt entwickeln wollte, und auch wegen meines mentalen Zusammenbruchs an einigen Stellen.",
+            "pl": "Nazywam się Łukasz, mam 19 lat i stworzyłem BookFreak, ponieważ czegoś mi brakowało w branży książek. Istniały pewne fora książkowe itp., jednak to nie było to, czego szukałem. Zainicjowałem ten projekt w lutym 2023 roku, ale praca nad nim nie zawsze była możliwa. Z powodu komplikacji w szkole, bo chciałem rozwijać ten projekt, a także z powodu mojego załamania psychicznego w pewnym momencie."
+        }
+    },
+    "ThreeBoxes":{
+        "first":{
+            "en":"Months of struggling",
+            "pl":"Miesięcy Walki",
+            "de":"Monate des Kampfes"
+        },
+        "second":{
+            "en":"Of hours of acquiring knowledge from tutorials",
+            "pl":"Godzin zdobywania wiedzy z tutoriali",
+            "de":"Stunden des Erwerbs von Wissen aus Tutorials"
+        },
+        "third":{
+"en":"Books, I have read since I stopped being stupid (23.06.2022)",
+"pl":"Książek, jakie przeczytałem od momentu, gdy przestałem być głupi (23.06.2022)",
+"de":"Bücher, die ich gelesen habe, seitdem ich aufgehört habe, dumm zu sein (23.06.2022)"
+        }
+    }, 
+    
+    "steps": {
+        "first": {
+            "header": {
+                "en": "The Very Beginnings",
+                "pl": "Same Początki",
+                "de": "Die ganz Anfänge"
+            },
+            "sideHeader": {
+                "en": "When it all started?",
+                "pl": "Kiedy to wszystko się zaczęło?",
+                "de": "Wann hat alles angefangen?"
+            },
+            "sideDescription": {
+                "en": "The project was initialized on 15.02.2023, and I typed every line of CSS code on my own. Here are the results. It wouldn't be a lie to say that you wouldn't use BookFreak if it stayed like that, would you?",
+                "de": "Das Projekt wurde am 15.02.2023 initialisiert, und ich habe jede Zeile CSS-Code selbst geschrieben. Hier sind die Ergebnisse. Es wäre nicht gelogen zu sagen, dass du BookFreak nicht verwenden würdest, wenn es so geblieben wäre, oder?",
+                "pl": "Projekt został zainicjowany 15.02.2023, a ja sam pisałem każdą linię kodu CSS. Oto rezultaty. Nie byłoby kłamstwem powiedzieć, że nie używałbyś BookFreak, gdyby pozostał taki, prawda?"
+            }
+        },
+        "second": {
+            "header": {
+                "en": "The Difficulties",
+                "pl": "Trudności",
+                "de": "Die Schwierigkeiten"
+            },
+            "sideHeader": {
+                "en": "What was wrong?",
+                "pl": "Co było nie tak?",
+                "de": "Was war falsch?"
+            },
+            "sideDescription": {
+                "en": "Unfortunately, every bigde project has its own struggles that it has to face. The same was in my case. I struggled at school and had a classification test after vacation to pass the class. I did pass, but it had an enormous impact on the state of my app. Even I contemplated whether I shouldn't just shut it down and give up on coding. But after all, there was a kind of breakthrough.",
+                "de": "Leider hat jedes größere Projekt seine eigenen Herausforderungen, mit denen es konfrontiert werden muss. Das Gleiche galt für meinen Fall. Ich hatte Probleme in der Schule und musste nach den Ferien einen Klassifizierungstest bestehen, um in die nächste Klasse zu kommen. Ich habe bestanden, aber es hatte einen enormen Einfluss auf den Zustand meiner App. Sogar ich habe darüber nachgedacht, ob ich sie nicht einfach schließen und mit dem Programmieren aufhören sollte. Aber schließlich gab es so etwas wie einen Durchbruch.",
+                "pl": "Niestety, każdy większy projekt ma swoje własne trudności, z którymi musi się zmierzyć. To samo dotyczyło mojego przypadku. Miałem problemy w szkole i po wakacjach musiałem zdać test klasyfikacyjny, aby przejść do następnej klasy. Udało mi się, ale miało to ogromny wpływ na stan mojej aplikacji. Nawet zastanawiałem się, czy nie powinienem jej po prostu zamknąć i zrezygnować z programowania. Ale mimo wszystko doszło do pewnego przełomu."
+            }
+        },
+        "third": {
+            "header": {
+                "en": "Breakthrough",
+                "pl": "Przełom",
+                "de": "Durchbruch"
+            },
+            "sideHeader": {
+                "en": "What happened?",
+                "pl": "Co się stało?",
+                "de": "Was ist passiert?"
+            },
+            "sideDescription": {
+                "en": "Finally, after a 3-month break, I got the spirit to work and continue this project. You have to admit that the interface looks much better here, doesn't it?",
+                "de": "Endlich, nach einer 3-monatigen Pause, habe ich den Geist gefunden, an diesem Projekt zu arbeiten und es fortzusetzen. Du musst zugeben, dass die Benutzeroberfläche hier viel besser aussieht, oder?",
+                "pl": "Wreszcie, po 3-miesięcznej przerwie, znalazłem chęć do pracy i kontynuowania tego projektu. Musisz przyznać, że interfejs wygląda teraz o wiele lepiej, prawda?"
+            }
+        }
+    },
+    "reasonForProject": {
+        "header": {
+            "en": "Why have I decided to create this project?",
+            "pl": "Dlaczego zdecydowałem się stworzyć ten projekt?",
+            "de": "Warum habe ich mich entschieden, dieses Projekt zu erstellen?"
+        },
+        "description": {
+            "en": "I decided to create this project, not only because I thought about my future portfolio as a developer, but I also wanted to revolutionize an outdated industry. This project contains tests, books, competitions, chats, clubs, money. Everything in one place.",
+            "pl": "Zdecydowałem się stworzyć ten projekt nie tylko ze względu na myślenie o moim przyszłym portfolio jako programisty, ale także chciałem zrewolucjonizować przestarzałą branżę. Ten projekt obejmuje testy, książki, konkursy, czaty, kluby, pieniądze. Wszystko w jednym miejscu.",
+            "de": "Ich habe mich entschieden, dieses Projekt zu erstellen, nicht nur, weil ich an mein zukünftiges Portfolio als Entwickler gedacht habe, sondern auch, um eine veraltete Branche zu revolutionieren. Dieses Projekt enthält Tests, Bücher, Wettbewerbe, Chats, Clubs, Geld. Alles an einem Ort."
+        }
+    },
+    "firstLogoSection": {
+        "header": {
+            "en": "First Logo",
+            "pl": "Pierwsze Logo",
+            "de": "Erstes Logo"
+        },
+        "description": {
+            "en": "It is worth to emphasize that I'm not great at graphics and so forth. That's why I had to create our first logo by means of the Internet. That one appealed to me, thus it's like that for now. How do you rate it?",
+            "pl": "Warto podkreślić, że nie jestem specjalistą od grafiki itp. Dlatego musiałem stworzyć nasze pierwsze logo za pomocą Internetu. To jedno przypadło mi do gustu, więc na razie jest takie. Jak je oceniasz?",
+            "de": "Es ist zu betonen, dass ich nicht besonders gut in Grafik und dergleichen bin. Deshalb musste ich unser erstes Logo über das Internet erstellen. Dieses hier hat mir gefallen, daher ist es vorerst so. Wie bewertest du es?"
+        }
+    },
+    "contactPage":{
+        "contact":{
+            "en":"contact",
+            "pl":"kontakt",
+            "de":"Kontakt"
+        },
+        "description":{
+            "en":"If you want to take a contact with us you can do it via",
+            "pl":"Jeśli chcesz skontaktować się z nami możesz to zrobić poprzez",
+            "de":"Kontakt mit uns erfolgen Sie über:"
+        }
+    }
+
+}

@@ -1,0 +1,30 @@
+{
+    "filters":{
+        "label":{
+            "en":"Filters",
+            
+            "de":"Filter",
+
+            "pl":"Filtry"
+        },
+        "testFilters":{
+            "notAlphabetically":{
+                "en":"Test's name (Z-A)",
+                "de":"Namen alphabetisch (Z-A)",
+                "pl":"Nazwa testu (Z-A)"
+            },
+            "Alphabeticaly":{
+                "en":"Test's name (A-Z) ",
+                "de":"Namen alphabetisch (A-Z)",
+                "pl":"Nazwa testu (A-Z)"
+            }
+        }
+    },
+    "sortings":{
+        "label":{
+            "en":"Sort by",
+            "de":"Sortieren nach",
+            "pl":"Sortuj według"
+        }
+    }
+}

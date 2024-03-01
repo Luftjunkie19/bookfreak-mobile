@@ -1,0 +1,157 @@
+{
+  "stats": {
+    "booksRead": {
+      "en": "Books read",
+      "pl": "Przeczytane książki",
+      "de": "Gelesene Bücher"
+    },
+    "addedBooks": {
+      "en": "Books added",
+      "pl": "Dodane książki",
+      "de": "Hinzugefügte Bücher"
+    },
+    "likedBooks": {
+      "en": "Books liked",
+      "pl": "Polubione książki",
+      "de": "Bücher, die ich mag"
+    }
+  },
+  "managmentButtons": {
+    "editButton": {
+      "en": "Edit Profile",
+      "pl": "Edytuj Profil",
+      "de": "Profil bearbeiten"
+    },
+    "addLinkButton": {
+      "en": "Add Link",
+      "pl": "Dodaj Link",
+      "de": "Link Hinzufügen"
+    },
+    "removeUserButton": {
+      "en": "Remove Account",
+      "pl": "Usuń Konto",
+      "de": "Konto Löschen"
+    }
+  },
+"credits":{
+  "en":"Your Credits",
+  "pl":"Twoje Środki",
+  "de":"Deine Guthaben"
+},
+"availableText":{
+  "en": "Available Credits: ",
+  "pl": "Dostępne Środki: ",
+  "de":"Verfügbare Guthaben: "
+},
+"pendingText":{
+  "en":"Pending Credits: ",
+  "pl":"Oczekiwane Środki: ",
+  "de":"Guthaben in Bearbeitung: "
+},
+
+"replenishBtn":{
+  "en":"Replenish your account",
+  "pl":"Zasil swoje konto",
+  "de":"Fülle dein Benutzerkonto auf"
+},
+
+  "description": {
+    "title": {
+      "en": "Description",
+      "pl": "Opis",
+      "de": "Beschreibung"
+    },
+    "vacancy": {
+      "en": "No description yet",
+      "pl": "Brak opisu",
+      "de": "Keine Beschreibung"
+    }
+  },
+
+  "emptyNotifications": {
+    "links": {
+      "en": "No links available",
+      "pl": "Brak dostępnych linków",
+      "de": "Keine Links verfügbar"
+    },
+    "books": {
+      "en": "No books available",
+      "pl": "Brak dodanych książek",
+      "de": "Keine hinzugefügte Bücher verfügbar"
+    },
+    "booksRead":{
+      "en":"No books read",
+      "pl":"Brak przeczytanych książek",
+      "de":"Keine gelesene Bücher"
+    },
+    "favourited": {
+      "en": "No favourite books available",
+      "pl": "Brak ulubionych książek",
+      "de": "Keine beliebte Bücher verfügbar"
+    }
+  },
+
+  "featuresButtons": {
+    "booksButton": {
+      "en": "Books",
+      "pl": "Książki",
+      "de": "Bücher"
+    },
+    "socialMediaButton": {
+      "en": "Social Media",
+      "pl": "Media Społecznościowe",
+      "de": "Sozialmedien"
+    },
+
+    "readBooksBtn": {
+      "en": "Read books",
+      "pl": "Przeczytane",
+      "de": "Gelesen"
+    },
+
+    "statsBtn":{
+      "en":"Statistics",
+      "pl":"Statystyki",
+      "de":"Statistiken"
+    },
+
+    "favouritesButton": {
+      "en": "Favourites",
+      "pl": "Ulubione",
+      "de": "Beliebte"
+    }
+  },
+  "addLinkForm": {
+    "topText": {
+      "en": "Add Link, so people can contact you !",
+      "pl": "Dodaj link, aby ludzie mieli z Tobą kontakt !",
+      "de": "Füge ein Link hinzu, mit den Leuten Kontakt zu haben !"
+    },
+    "query": {
+      "en": "Where would you like to direct to ?",
+      "pl": "Dokąd chcesz przez link przekierować?",
+      "de": "Wohin möchten Sie per Link hinrichten ?"
+    },
+
+    "btnText": {
+      "en": "Add Link",
+      "pl": "Dodaj link",
+      "de": "Link Hinzufügen"
+    },
+    "placeHolder": {
+      "en": "Enter a Link...",
+      "pl": "Wprowadź link...",
+      "de": "Link eingeben..."
+    },
+    "selectType": {
+      "en": "Select type",
+      "pl": "Wybierz rodzaj",
+      "de": "Art Auswählen"
+    }
+  },
+  "messageBtn": {
+    "en": "Message",
+    "pl": "Napisz",
+    "de": "Nachricht"
+  }
+}

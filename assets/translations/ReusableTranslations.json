@@ -1,0 +1,182 @@
+{
+  "detailsText": {
+    "de": "Einzelheiten",
+    "en": "Details",
+    "pl": "Szczegóły"
+  },
+  "claimPrize":{
+    "en":"Claim your Prize",
+    "de":"Preis abholen",
+    "pl":"Przyjmij swoją nagrodę"
+  },
+  "categoryText": {
+    "de": "Kategorie",
+    "en": "Category",
+    "pl": "Kategoria"
+  },
+  "joinTo": {
+    "competition": {
+      "de": "Wettbewerb beitreten",
+      "en": "Join To Competition",
+      "pl": "Dołącz do konkursu"
+    },
+    "club": {
+      "de": "Lesegruppe beitreten",
+      "en": "Join To Club",
+      "pl": "Dołącz do klubu"
+    }
+  },
+  "releasedBy":{
+"part1":{
+  "de":"Veröffentlicht von ",
+  "en":"Released by ",
+  "pl": "Wydane przez"
+},
+"part2":{
+  "de":"im Jahr",
+  "en":"in",
+  "pl": "w roku"
+}    
+  },
+  "publishingHouseCountry":{
+    "de": "Publiziert in ",
+    "en": "Published in ",
+    "pl": "Opublikowane w "
+  },
+  "bookDescription":{
+    "de":"Beschreibung von",
+    "en":"Description about",
+    "pl": "Opis"
+  },
+"recommendText":{
+  "de":"Empfehle",
+  "en":"Reccommend",
+  "pl": "Poleć"
+},
+
+  "pagesText": {
+    "de": "Seiten",
+    "en": "Pages",
+    "pl": "Ilość stron"
+  },
+  "communitiesBar": {
+    "chatBtn": {
+      "de": "Chat Ansehen",
+      "en": "Show Chat",
+      "pl": "Zobacz Czat"
+    },
+    "overallBtn": {
+      "de": "Allgemeine",
+      "en": "Overall",
+      "pl": "Ogólne"
+    },
+    "leaveBtn": {
+      "de": "Verlassen",
+      "en": "Leave",
+      "pl": "Opuść"
+    },
+    "editBtn": {
+      "de": "Bearbeiten",
+      "en": "Edit",
+      "pl": "Edytuj"
+    },
+    "deleteBtn": {
+      "de": "Löschen",
+      "en": "Delete",
+      "pl": "Usuń"
+    }
+  },
+  "closeBtn": {
+    "de": "Schließen",
+    "en": "Close",
+    "pl": "Zamknij"
+  },
+
+  "saveBtn": {
+    "de": "Speichern",
+    "en": "Save",
+    "pl": "Zapisz"
+  },
+
+  "updateStatus": {
+    "de": "Lesestand aktualisieren",
+    "en": "Update Reading Status",
+    "pl": "Uaktualnij status czytania"
+  },
+
+  "managementBtn": {
+    "de": "Verwaltung",
+    "en": "Managment",
+    "pl": "Zarządzanie"
+  },
+
+  "createdBy": {
+    "de": "Gegründet von",
+    "en": "Founded by",
+    "pl": "Założone przez"
+  },
+
+  "RankingTranslations": {
+    "heads": {
+      "userHead": {
+        "de": "Benutzer",
+        "en": "User",
+        "pl": "Użytkownik"
+      },
+      "booksReadHead": {
+        "de": "Gelesene Bücher",
+        "en": "Read books",
+        "pl": "Przeczytane książki"
+      },
+      "currentBookHead": {
+        "de": "Aktuelles Buch",
+        "en": "Current Book",
+        "pl": "Aktualna książka"
+      }
+    }
+  },
+
+  "sortTexts": {
+    "de": "Sortieren nach",
+    "en": "Sort by",
+    "pl": "Sortuj po"
+  },
+
+  "navigationBetweenBtns": {
+    "forward": {
+      "de": "Weiter",
+      "en": "Next",
+      "pl": "Dalej"
+    },
+    "backward": {
+      "de": "Zurück",
+      "en": "Back",
+      "pl": "Wstecz"
+    }
+  },
+
+  "messageAreaInput": {
+    "placeholder": {
+      "de": "Nachricht schreiben...",
+      "en": "Enter message...",
+      "pl": "Napisz wiadomość..."
+    }
+  },
+  "booksObjects": {
+    "books": {
+      "de": "Bücher",
+      "en": "Books",
+      "pl": "Książki"
+    },
+    "book": {
+      "de": "Buch",
+      "en": "Book",
+      "pl": "Książka"
+    }
+  },
+  "authorDescription":{
+    "en":"Here are all books, written by",
+    "de":"Hier sind alle Bücher von",
+    "pl":"Oto wszystkie książki autorstwa"
+  }
+}
