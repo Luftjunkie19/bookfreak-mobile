@@ -1,5 +1,10 @@
 {
   "buttonsTexts": {
+    "actions":{
+      "en":"Actions",
+      "de":"Maßnahmen",
+      "pl":"Operacje"
+    },
     "edit": {
       "de": "Bearbeiten",
       "en": "Edit",
@@ -9,6 +14,16 @@
       "de": "Löschen",
       "en": "Delete",
       "pl": "Usuń"
+    },
+    "likeIt":{
+      "de":"Ich mag es !",
+      "en":"I like it !",
+      "pl":"Lubię to!"
+    },
+    "disLikeit":{
+      "de":"Nicht mein Ding",
+      "en":"Don't like it anymore",
+      "pl":"Nie lubię już tego."
     },
     "removeShelf": {
       "de": "Ausm Regal loswerden",

@@ -29,6 +29,7 @@ import {
 import alertMessages from '../../../assets/translations/AlertMessages.json';
 import formTranslations
   from '../../../assets/translations/FormsTranslations.json';
+import Loader from '../../../components/Loader';
 import { useAuthContext } from '../../../hooks/useAuthContext';
 import useGetDocuments from '../../../hooks/useGetDocuments';
 import { useRealDatabase } from '../../../hooks/useRealDatabase';

@@ -326,10 +326,11 @@ const {getDocument}=useRealtimeDocument();
         style:{
           backgroundColor:"red"
         },
-        label: 'Remove from shelf',
+        label: translations.buttonsTexts.removeShelf[selectedLanguage],
         labelStyle:{
-          color:"white"
-        },
+          color:"white",
+          fontFamily:"OpenSans-Bold"
+         },
         onPress: () => {
           removeFromShelf();
         },
@@ -343,10 +344,11 @@ const {getDocument}=useRealtimeDocument();
         style:{
           backgroundColor:"blue"
         },
-        label: 'Edit book',
+        label: translations.buttonsTexts.edit[selectedLanguage],
         labelStyle:{
-          color:"white"
-        },
+          color:"white",
+          fontFamily:"OpenSans-Bold"
+         },
         onPress: () => {
           navigation.navigate('BookEdit', {
             id:id,
@@ -361,9 +363,10 @@ const {getDocument}=useRealtimeDocument();
           backgroundColor:"red"
         },
         labelStyle:{
-          color:"white"
-        },
-        label: 'Remove from shelf',
+          color:"white",
+          fontFamily:"OpenSans-Bold"
+         },
+        label: translations.buttonsTexts.delete[selectedLanguage],
         onPress: () => {
           clickDelete();
           navigation.navigate('HomeScreen');
@@ -497,11 +500,11 @@ actions={[
 ...bookObjectCreatorButtons,
            {
              icon: 'heart',
-             label: 'Like it',
+             label: isLiked ? translations.buttonsTexts.disLikeit[selectedLanguage] : translations.buttonsTexts.likeIt[selectedLanguage],
              color:"white",
              labelStyle:{
               color:"white",
-              fontFamily:"Inter-Black"
+              fontFamily:"OpenSans-Bold"
              },
              style:{
                backgroundColor: isLiked ? "red" : "gray"
@@ -518,10 +521,11 @@ actions={[
              style:{
                backgroundColor:accColor
              },
-             labelStyle:{
-              color:"white", fontFamily:"Inter-Black"
+           labelStyle:{
+              color:"white",
+              fontFamily:"OpenSans-Bold"
              },
-             label: !readerStateCondition ? "Add to bookshelf" : "Edit Reader-state",
+             label: !readerStateCondition ? translations.buttonsTexts.addToShelf[selectedLanguage] : translations.buttonsTexts.updateStatus[selectedLanguage],
              onPress: () => {
                if(!readerStateCondition){
                  goToBookReaderForm();
@@ -530,7 +534,7 @@ actions={[
                }
              },
            },
-         ]} color='white' mode='elevated' size='small' label='Actions' icon={'dots-vertical'} onStateChange={onStateChanged}
+         ]} color='white' mode='elevated' size='small' label={translations.buttonsTexts.actions[selectedLanguage]} icon={'dots-vertical'} onStateChange={onStateChanged}
          />
     </>
  

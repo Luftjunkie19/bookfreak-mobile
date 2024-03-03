@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 import { httpsCallable } from 'firebase/functions';
 import {
-  Alert,
   ScrollView,
   Text,
   View,
@@ -40,6 +39,7 @@ import {
 import alertMessages from '../../../assets/translations/AlertMessages.json';
 import formTranslations
   from '../../../assets/translations/FormsTranslations.json';
+import Loader from '../../../components/Loader';
 import { functions } from '../../../firebaseConfig';
 import { useAuthContext } from '../../../hooks/useAuthContext';
 import useGetDocument from '../../../hooks/useGetDocument';
@@ -189,7 +189,7 @@ setInvitedUsers(invitedUsers);
         return;
       }
 
-      if (competition.prize.moneyPrize.amount > document.creditsAvailable) {
+      if (competition.prize.moneyPrize.amount > document.creditsAvailable.valueInMoney) {
         dispatch({type:"SHOW_SNACKBAR", payload:{message:`${alertMessages.notifications.wrong.notEnoughCredits[selectedLanguage]}`, alertType:"error"}});        
      
         setIsPending(false);
@@ -225,7 +225,7 @@ setInvitedUsers(invitedUsers);
 
         if (error) {
           setError(error);
-          Alert.alert(error)
+          dispatch({type:"SHOW_SNACKBAR", payload:{message:error, alertType:"error"}});
           setIsPending(false);
           return;
         }

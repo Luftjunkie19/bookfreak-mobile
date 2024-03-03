@@ -239,13 +239,14 @@ useDerivedValue(() => {
       }
           
 <View style={{margin:2}}>
-            {balanceObject && <View>
-              <Text style={{fontFamily:"OpenSans-Bold", color:"white", fontSize:20}}>{profileTranslations.availableText[selectedLanguage]}</Text>
-              {balanceObject.available.map((itemBalance) => (<Text style={{fontFamily:"OpenSans-Bold", color:"white", fontSize:16}}>{itemBalance.amount / 100}<Text style={{color:"lightgreen"}}>
+ <View>
+  <Text style={{fontFamily:"OpenSans-Bold", color:"white", fontSize:20}}>{profileTranslations.availableText[selectedLanguage]}</Text>
+              {document.creditsAvailable.balance.map((itemBalance) => (<Text style={{fontFamily:"OpenSans-Bold", color:"white", fontSize:16}}>{itemBalance.amount / 100}<Text style={{color:"lightgreen"}}>
                 {itemBalance.currency.toUpperCase()}
               </Text>
-              </Text>))}
+              </Text>))}  
 
+{balanceObject && <View>
               <Text style={{fontFamily:"OpenSans-Bold", color:"white", fontSize:20}}>{profileTranslations.pendingText[selectedLanguage]}</Text>
                   {balanceObject.pending.map((itemBalance) => (<Text style={{fontFamily:"OpenSans-Bold", color:"white", fontSize:16}}>{itemBalance.amount/100} <Text style={{ color:"lightgreen"}}>
                 {itemBalance.currency.toUpperCase()}
@@ -253,6 +254,7 @@ useDerivedValue(() => {
               </Text>))}
 
             </View>}
+  </View>
 
 </View>
     </View>

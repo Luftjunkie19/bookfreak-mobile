@@ -13,5 +13,15 @@
         "en":"Toup",
         "de":"Auffüllen",
         "pl":"Zasil"
+    },
+    "errorToBigAmount":{
+        "en":"To big amount has been provided !",
+        "pl":"Podano zbyt wielką sumę do wypłaty !",
+        "de":"Es wurde ein zu großer Betrag eingeführt !"
+    },
+    "successfullyPaidOut":{
+        "en": "Successfully paid out !",
+        "de": "Erfolgreich ausgezahlt !",
+        "pl": "Udanie wypłacone !"
     }
 }

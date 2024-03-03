@@ -49,6 +49,24 @@ const CompetitionActionsScreen = ({route}) => {
   document && (document.expiresAt - new Date().getTime()) / 86400000;
   const deleteCompetition = async (id) => {
     setIsPending(true);
+
+    if (
+      competitionExpirationDate <= 0 &&
+      !document.prizeHandedIn &&
+      document.prize.moneyPrize &&
+      !document.prize.itemPrize
+    ) {
+      setIsPending(false);
+      dispatch({type:"SHOW_SNACKBAR", payload:{message:alertTranslations.notifications.wrong.winnerClaimError[selectedLanguage], alertType:"error"}});
+    
+      return;
+    } else {
+      removeFromDataBase("competitions", id);
+      removeFromDataBase("communityChats", id);
+      removeFromDataBase("communityMembers", id);
+      setIsPending(false);
+    }
+
     if (
       !document.prizeHandedIn &&
       document.prize.moneyPrize &&
@@ -94,22 +112,7 @@ const CompetitionActionsScreen = ({route}) => {
       setIsPending(false);
     }
 
-    if (
-      competitionExpirationDate <= 0 &&
-      !document.prizeHandedIn &&
-      document.prize.moneyPrize &&
-      !document.prize.itemPrize
-    ) {
-      setIsPending(false);
-      dispatch({type:"SHOW_SNACKBAR", payload:{message:alertTranslations.notifications.wrong.winnerClaimError, alertType:"error"}});
-    
-      return;
-    } else {
-      removeFromDataBase("competitions", id);
-      removeFromDataBase("communityChats", id);
-      removeFromDataBase("communityMembers", id);
-      setIsPending(false);
-    }
+   
     navigation.navigate("HomeScreen");
     navigation.setParams({ params:{id: null}});
  dispatch({type:"SHOW_SNACKBAR", payload:{message:`${alertTranslations.notifications.successfull.remove[selectedLanguage]}`, alertType:"success"}});
