@@ -2,7 +2,7 @@
   "expo": {
     "name": "BookFreak Mobile",
     "slug": "bookfreak-mobile",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "orientation": "portrait",
     "icon": "./assets/Logo.png",
     "userInterfaceStyle": "light",
@@ -38,7 +38,7 @@
     "android": {
       "googleServicesFile": "./google-services (11).json",
       "package": "com.bookfreak.org",
-      "versionCode": 5,
+      "versionCode": 6,
       "adaptiveIcon": {
         "foregroundImage": "./assets/Logo.png",
         "backgroundColor": "#ffffff"

@@ -9,7 +9,6 @@ import {
 import {
   BannerAd,
   BannerAdSize,
-  TestIds,
 } from 'react-native-google-mobile-ads';
 import { useSelector } from 'react-redux';
 
@@ -23,7 +22,7 @@ import PieChart from '../../components/ProfileComponents/charts/PieChart';
 import { useAuthContext } from '../../hooks/useAuthContext';
 import useGetDocuments from '../../hooks/useGetDocuments';
 
-const adUnitId = __DEV__ ? TestIds.ADAPTIVE_BANNER : 'ca-app-pub-9822550861323688~6900348989';
+const adUnitId = 'ca-app-pub-9822550861323688~6900348989';
 
 const YourStatistics = () => {
 const {user}=useAuthContext();

@@ -9,10 +9,7 @@ import {
 } from 'react-native';
 import { CountryPicker } from 'react-native-country-codes-picker';
 import { SelectList } from 'react-native-dropdown-select-list';
-import {
-  AppOpenAd,
-  TestIds,
-} from 'react-native-google-mobile-ads';
+import { AppOpenAd } from 'react-native-google-mobile-ads';
 import { useSelector } from 'react-redux';
 
 import {
@@ -50,7 +47,7 @@ import { useSelectPhoto } from '../../../hooks/useSelectPhoto';
 import { useSnackbarContext } from '../../../hooks/useSnackbarContext';
 import useStorage from '../../../hooks/useStorage';
 
-const adUnitId = __DEV__ ? TestIds.APP_OPEN : 'ca-app-pub-9822550861323688~6900348989';
+const adUnitId = 'ca-app-pub-9822550861323688~6900348989';
 
 const CreateBook = ({navigation}) => {
   const appOpenAd = AppOpenAd.createForAdRequest(adUnitId);

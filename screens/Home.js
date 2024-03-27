@@ -16,7 +16,6 @@ import {
 import {
   BannerAd,
   BannerAdSize,
-  TestIds,
 } from 'react-native-google-mobile-ads';
 import Animated, {
   useAnimatedStyle,
@@ -48,7 +47,7 @@ import CompetitionSwiper
 import { useAuthContext } from '../hooks/useAuthContext';
 import useGetDocument from '../hooks/useGetDocument';
 
-const adUnitId= __DEV__ ? TestIds.ADAPTIVE_BANNER : 'ca-app-pub-9822550861323688~6900348989';
+const adUnitId= 'ca-app-pub-9822550861323688~6900348989';
 
 
 const Home = ({navigation}) => {

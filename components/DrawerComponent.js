@@ -13,7 +13,6 @@ import {
 import {
   AdEventType,
   InterstitialAd,
-  TestIds,
 } from 'react-native-google-mobile-ads';
 import MaterialCommunityIcons
   from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -46,7 +45,7 @@ import { useAuthContext } from '../hooks/useAuthContext';
 import useGetDocument from '../hooks/useGetDocument';
 import { useLogout } from '../hooks/useLogout';
 
-const adUnitId = __DEV__ ? TestIds.INTERSTITIAL : 'ca-app-pub-9822550861323688~6900348989';
+const adUnitId ='ca-app-pub-9822550861323688~6900348989';
 
 const interstitial = InterstitialAd.createForAdRequest(adUnitId);
 

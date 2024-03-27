@@ -7,10 +7,7 @@ import {
   View,
 } from 'react-native';
 import { MultipleSelectList } from 'react-native-dropdown-select-list';
-import {
-  AppOpenAd,
-  TestIds,
-} from 'react-native-google-mobile-ads';
+import { AppOpenAd } from 'react-native-google-mobile-ads';
 import { useSelector } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -40,7 +37,7 @@ import { useRealDatabase } from '../../../hooks/useRealDatabase';
 import { useSnackbarContext } from '../../../hooks/useSnackbarContext';
 import useStorage from '../../../hooks/useStorage';
 
-const adUnitId = __DEV__ ? TestIds.APP_OPEN : 'ca-app-pub-9822550861323688~6900348989';
+const adUnitId = 'ca-app-pub-9822550861323688~6900348989';
 
 const CreateClub = () => {
   const appOpenAd = AppOpenAd.createForAdRequest(adUnitId);

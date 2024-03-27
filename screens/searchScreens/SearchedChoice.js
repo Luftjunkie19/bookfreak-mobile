@@ -9,7 +9,6 @@ import {
 import {
   BannerAd,
   BannerAdSize,
-  TestIds,
 } from 'react-native-google-mobile-ads';
 import { Searchbar } from 'react-native-paper';
 import { useSelector } from 'react-redux';
@@ -26,7 +25,7 @@ import { useAuthContext } from '../../hooks/useAuthContext';
 import useGetDocuments from '../../hooks/useGetDocuments';
 import SearchedItem from './searchedItems/SearchedItem';
 
-const adUnitId= __DEV__ ? TestIds.ADAPTIVE_BANNER : 'ca-app-pub-9822550861323688~6900348989';
+const adUnitId= 'ca-app-pub-9822550861323688~6900348989';
 
 const SearchedChoice = ({route, navigation}) => {
   const {collection}=route.params;
