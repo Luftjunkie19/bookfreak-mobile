@@ -6,6 +6,11 @@ import {
   Text,
   View,
 } from 'react-native';
+import {
+  BannerAd,
+  BannerAdSize,
+  TestIds,
+} from 'react-native-google-mobile-ads';
 import { Searchbar } from 'react-native-paper';
 import { useSelector } from 'react-redux';
 
@@ -21,6 +26,8 @@ import { useAuthContext } from '../../hooks/useAuthContext';
 import useGetDocuments from '../../hooks/useGetDocuments';
 import SearchedItem from './searchedItems/SearchedItem';
 
+const adUnitId= __DEV__ ? TestIds.ADAPTIVE_BANNER : 'ca-app-pub-9822550861323688~6900348989';
+
 const SearchedChoice = ({route, navigation}) => {
   const {collection}=route.params;
   const {user}=useAuthContext();
@@ -30,7 +37,6 @@ const SearchedChoice = ({route, navigation}) => {
   const selectedLanguage=useSelector((state)=>state.languageSelection.selectedLangugage);
 
 
-
   return (
     <View style={{backgroundColor:theme['color-basic-800'], flex:1}}>
 
@@ -38,6 +44,8 @@ const SearchedChoice = ({route, navigation}) => {
 <Searchbar rippleColor={primeColor} iconColor='white' placeholderTextColor='white' clearButtonMode='while-editing' placeholder={collection ==='books' ? translations.searchInput.placeholderBooks[selectedLanguage] : translations.searchInput.placeholderUsers[selectedLanguage]} style={{margin:16, backgroundColor:accColor}} inputStyle={{color:"white", fontFamily:"OpenSans-Regular"}} onTextInput={({nativeEvent})=>{
   setSearchQuery(nativeEvent.text);
 }} />
+
+<BannerAd unitId={adUnitId} size={BannerAdSize.LEADERBOARD}/>
 
 <Text style={{color:"white", fontFamily:"OpenSans-Bold", textAlign:"center", fontSize:16, paddingVertical:8}}>{translations.searchedParam[selectedLanguage]} {searchQuery}</Text>
 

@@ -38,6 +38,7 @@ import translations
 import formTranslations
   from '../../../assets/translations/FormsTranslations.json';
 import Loader from '../../../components/Loader';
+import { useAuthContext } from '../../../hooks/useAuthContext';
 import { useFormRealData } from '../../../hooks/useFormRealData';
 import useGetDocuments from '../../../hooks/useGetDocuments';
 import { useRealDatabase } from '../../../hooks/useRealDatabase';
@@ -45,6 +46,7 @@ import { useRealDatabase } from '../../../hooks/useRealDatabase';
 const EditTest = ({ route,navigation }) => {
   const { id } = route.params;
   const alphabet = require('alphabet');
+  const {user}=useAuthContext();
   const [isPending, setIsPending]=useState(false);
   const { updateDatabase } = useRealDatabase();
   const { document } = useFormRealData("tests", id);
@@ -70,10 +72,14 @@ const EditTest = ({ route,navigation }) => {
 
   useEffect(() => {
     if (document) {
-      setData(document);
-      setTestName(document.testName);
-      setRefersToBook(document.refersToBook);
-      setQueries(Object.values(document.queries));
+      if(document.createdBy.id === user.uid){
+        setData(document);
+        setTestName(document.testName);
+        setRefersToBook(document.refersToBook);
+        setQueries(Object.values(document.queries));
+      } else {
+            navigation.navigate('HomeScreen');
+      }
     }
   }, [document]);
 

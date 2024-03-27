@@ -15,12 +15,16 @@ import {
   ModalContent,
   ModalHeader,
 } from '@gluestack-ui/themed';
+import { useNavigation } from '@react-navigation/native';
 import { useTheme } from '@ui-kitten/components';
 
 import { accColor } from '../../assets/ColorsImport';
+import { useAuthContext } from '../../hooks/useAuthContext';
 
 const LikersModal = ({likers, isOpened, closeModal}) => {
     const theme=useTheme();
+    const {user}=useAuthContext();
+    const navigation=useNavigation();
   return (
     <Modal isOpen={isOpened}>
     <ModalBackdrop onPress={closeModal}/>
@@ -32,7 +36,16 @@ const LikersModal = ({likers, isOpened, closeModal}) => {
         </ModalCloseButton>
       </ModalHeader>
       <ModalBody contentContainerStyle={{gap:16}}>
-        {likers.map((liker)=>(<Pressable android_ripple={{color:accColor, radius:155, }} style={{flexDirection:"row", gap:16, alignItems:"center", padding:8, borderRadius:8}}>
+        {likers.map((liker)=>(<Pressable onPress={()=>{
+if(liker.lovedBy === user.uid){
+  navigation.navigate('yourProfile');
+}else{
+  navigation.navigate('ProfileScreen', {
+    id:liker.lovedBy,
+  });
+}
+
+        }} android_ripple={{color:accColor, radius:155, }} style={{flexDirection:"row", gap:16, alignItems:"center", padding:8, borderRadius:8}}>
 <Image source={{uri:liker.photoURL}} style={{width:60, height:60, borderRadius:100}}/>
 <Text style={{fontFamily:"Inter-Black", color:"white"}}>{liker.displayName}</Text>
         </Pressable>))}

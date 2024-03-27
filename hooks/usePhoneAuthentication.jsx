@@ -17,7 +17,7 @@ const createAccountLink=httpsCallable(functions, "createAccountLink");
 const {dispatch}=useAuthContext();
  const sendVerificationCode= async (phoneNumber, countryNumber, recaptchaVerifier, sendVerificationId, setVerificationError)=>{
     try {
-   const verificationId= await auth().signInWithPhoneNumber(`${countryNumber}${phoneNumber}`,true);
+   const verificationId= await auth().signInWithPhoneNumber(`+${countryNumber}${phoneNumber}`,true);
 
    sendVerificationId(verificationId);
 } catch (error) {

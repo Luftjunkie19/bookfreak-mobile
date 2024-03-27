@@ -13,6 +13,11 @@ import {
   TouchableNativeFeedback,
   View,
 } from 'react-native';
+import {
+  BannerAd,
+  BannerAdSize,
+  TestIds,
+} from 'react-native-google-mobile-ads';
 import Animated, {
   useAnimatedStyle,
   useSharedValue,
@@ -43,6 +48,9 @@ import CompetitionSwiper
 import { useAuthContext } from '../hooks/useAuthContext';
 import useGetDocument from '../hooks/useGetDocument';
 
+const adUnitId= __DEV__ ? TestIds.ADAPTIVE_BANNER : 'ca-app-pub-9822550861323688~6900348989';
+
+
 const Home = ({navigation}) => {
   const animation = useRef(null);
   const NativeText= styled(Text);
@@ -58,6 +66,7 @@ const pressedGroups=useSharedValue(1);
 const pressedGroupsY=useSharedValue(0);
 const pressedComps=useSharedValue(1);
 const pressedCompsY=useSharedValue(0);
+
 
   const pressedTests=()=>{
 pressedTest.value=1.05;
@@ -148,6 +157,9 @@ const onRefresh=()=>{
     handleReview();
 },[])
   
+
+
+
 const theme=useTheme();
   return (
     <ScrollView style={{backgroundColor:theme["color-basic-800"]}} refreshControl={<RefreshControl refreshing={refreshing} colors={['#5DA46F']} onRefresh={onRefresh} />}>
@@ -180,7 +192,10 @@ const theme=useTheme();
 <NativeText className='font-interBlack text-white text-xl m-1'>{homeTranslations.homePage.recentTexts.books[selectedLanguage]}</NativeText>
 <BooksSwiper/>
 
+<BannerAd unitId={adUnitId} size={BannerAdSize.FULL_BANNER}/>
+
 <NativeText className='font-interBlack text-white text-xl m-1'>{homeTranslations.homePage.explorationOptions.title[selectedLanguage]}</NativeText>
+
 
 <View style={{flexDirection: "row", flexWrap: "wrap", gap: 16, margin: 16, alignItems: "center", justifyContent: "space-around"}}>
   <TouchableNativeFeedback onPressOut={pressedTestsOut} onPressIn={pressedTests} onPress={()=>{

@@ -1,12 +1,17 @@
 import React from 'react';
 
+import { Dimensions } from 'react-native';
 import {
-  VictoryLabel,
+  Flyout,
   VictoryPie,
   VictoryTheme,
+  VictoryTooltip,
 } from 'victory-native';
 
-import { accColor } from '../../../assets/ColorsImport';
+import {
+  accColor,
+  primeColor,
+} from '../../../assets/ColorsImport';
 import useGetDocuments from '../../../hooks/useGetDocuments';
 
 const PieChart = ({data}) => {
@@ -43,21 +48,22 @@ const PieChart = ({data}) => {
   const transformedBooksArray = books.length > 0 ? transformBooks(books) : [];
 
   return (
-   <VictoryPie   labelPosition={({ index }) => index
-   ? "centroid"
-   : "startAngle"
+   <VictoryPie
+   labelPosition={({ index }) => 
+   "startAngle"
  }
- labelPlacement={({ index }) => index
-   ? "parallel"
-   : "vertical"
- } labelComponent={<VictoryLabel/>}  labelIndicator  height={300} theme={VictoryTheme.material} animate={{
-    duration:500,
+
+ labelPlacement={({ index }) => "vertical"}
+ labelComponent={<VictoryTooltip  activateData activePoints={2}  flyoutStyle={{ stroke: accColor, strokeWidth: 2 }} flyoutComponent={<Flyout style={{backgroundColor:primeColor, padding:8}} />} />}  width={Dimensions.get('screen').width / 1.05} height={Dimensions.get('screen').height / 2} theme={VictoryTheme.material} animate={{
+    duration:1000,
+    easing:'circleIn'
    }} style={{
     data: {
       fillOpacity: 0.9, stroke: accColor, strokeWidth: 3
     },
     labels: {
-      fontSize: 14, fontWeight:'500', fill: "#ffffff"
+      fontSize: 14, fontWeight:'500', fill: "#ffffff",
+      fontFamily:"OpenSans-Regular"
     }
   }} data={transformedBooksArray}/>
   )

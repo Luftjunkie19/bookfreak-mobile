@@ -13,5 +13,10 @@
         "en":"Progress and amount of read books",
         "pl":"Postęp i ilość przeczytanych książek",
         "de":"Fortschritt und Anzahl der gelesenen Bücher"
+    },
+    "noProgressToshow":{
+        "en":"No Progress to be shown.",
+        "de":"Kein Fortschritt um anzuzeigen.",
+        "pl":"Brak postępu do wyświetlenia."
     }
 }

@@ -15,11 +15,27 @@
       },
       "oauth_client": [
         {
-          "client_id": "389109624627-vmla5g4htkbj88qo2lab9v19rqb6udlg.apps.googleusercontent.com",
+          "client_id": "389109624627-cn52pav0a6f7q95ra4q5atbpt879k6lc.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.bookfreak.org",
             "certificate_hash": "4f3f6abc6ab91ab488f36df4eda2d5926eda63cc"
+          }
+        },
+        {
+          "client_id": "389109624627-r2f99bahautm939vv9kcq3c4mi24dkbf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bookfreak.org",
+            "certificate_hash": "19fab85985ae7ad14673360d818de8c5571d8835"
+          }
+        },
+        {
+          "client_id": "389109624627-sgq09fo9n6kvasla4s18utbrc0ts2dc0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bookfreak.org",
+            "certificate_hash": "ea6fb70c46efac5fa27057350f9588b76e4196b4"
           }
         },
         {

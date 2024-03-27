@@ -8,6 +8,8 @@ import {
   VictoryTooltip,
 } from 'victory-native';
 
+import { accColor } from '../../../assets/ColorsImport';
+
 const LineChart = ({data, secondData}) => {
   const userReadingProgressData = data
   .map((reader, i) => {
@@ -46,7 +48,7 @@ const bookPages=userReadingProgressData.map((data) => data.bookPages);
           tickFormat={(x) => (`${x}%`)}
         />
   
-  <VictoryBar alignment='start' data={userReadingProgressData} labelComponent={<VictoryTooltip />}/>
+  <VictoryBar  cornerRadius={8} animate={{duration:1000, easing:'bounceIn', onLoad:{duration:1000}}} style={{ data: { fill: accColor } }} alignment="start" data={userReadingProgressData} labelComponent={<VictoryTooltip activateData  />} />
 </VictoryChart>
   )
 }

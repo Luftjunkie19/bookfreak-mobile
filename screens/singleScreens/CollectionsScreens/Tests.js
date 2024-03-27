@@ -76,7 +76,7 @@ const filterOptions=[{label:"Queries <= 10", filter:(array)=>{
         <LottieView autoPlay source={require('../../../assets/lottieAnimations/Animation - 1699294838586.json')} style={{width:150, height:300}} />
         <Text style={{ fontFamily: "OpenSans-Bold", fontSize: 20, color: "white", textAlign: "center" }}>{translations.noResultsText[selectedLanguage]}</Text>
       </View>}
-   {documents && documents.length > 0 &&  <FlatList scrollEnabled numColumns={2} initialNumToRender={10} contentContainerStyle={{ margin:8}} data={sortedArray()} renderItem={({item, index})=>(<TestItem test={item}/>)}/>}
+   {documents && documents.length > 0 &&  <FlatList scrollEnabled numColumns={2} initialNumToRender={10} contentContainerStyle={{ margin:8, alignItems:"center"}} data={sortedArray()} renderItem={({item, index})=>(<TestItem test={item}/>)}/>}
     </View>
   )
 }

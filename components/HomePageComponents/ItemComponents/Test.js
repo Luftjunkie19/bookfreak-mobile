@@ -1,6 +1,7 @@
 import React from 'react';
 
 import {
+  Dimensions,
   Image,
   Text,
   TouchableNativeFeedback,
@@ -26,7 +27,7 @@ const TestItem = ({test}) => {
         })
     }}
   >
-    <View style={{backgroundColor:accColor, borderRadius:8, margin:6,}}>
+    <View style={{backgroundColor:accColor, borderRadius:8, margin:6, width:Dimensions.get('screen').width / 2.5}}>
     {test.refersToBook.photoURL ? (
 
 <Image
@@ -36,13 +37,13 @@ style={{width:"100%", height:130, alignSelf:"center"}}
 ) : (
 
 <Image
-  source={{uri:"https://m.media-amazon.com/images/I/51qwdm+hKgL.png"}}
-  style={{width:130, height:130, alignSelf:"center"}}
+  source={require('../../../assets/Logo.png')}
+  style={{width:"100%", height:130, alignSelf:"center"}}
 />
 
 )}
 <View style={{paddingVertical:12, paddingHorizontal:20,}}>
-      <Text style={{color:"white", fontFamily:"Inter-Black"}} >{test.testName}</Text>
+      <Text style={{color:"white", fontFamily:"Inter-Black"}} >{test.testName.trim().length >= 10 ? `${test.testName.slice(0,7)}...` : test.testName}</Text>
       {test.refersToBook.title ? (
         <Text style={{color:"white", fontFamily:"Inter-Black"}}>{test.refersToBook.title.trim().length >= 10 ? `${test.refersToBook.title.slice(0,7)}...` : test.refersToBook.title}</Text>
       ) : (

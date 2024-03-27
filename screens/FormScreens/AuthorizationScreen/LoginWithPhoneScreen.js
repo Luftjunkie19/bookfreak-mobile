@@ -85,7 +85,7 @@ const selectedCountryNumber = (val)=>{
 }
 
 const sendCode= async ()=>{
-  await sendVerificationCode(textNumber, country.dial_code, isVerificationNumberSent, setVerificationID, setError);
+  await sendVerificationCode(textNumber, country.phone, isVerificationNumberSent, setVerificationID, setError);
  };
 
  const approveCode= async ()=>{
@@ -105,7 +105,7 @@ const theme=useTheme();
 
   {
     !isVerificationNumberSent && <View>
-  <CountryPhoneInput validation={validate}  setCountry={selectedCountry} country={country} setTextNumber={selectedNumber} textNumber={textNumber} selectCountry={selectCountry} setSelectCountry={selectedCountryNumber}/>
+  <CountryPhoneInput validation={validate}  select={selectedCountry} country={country} setTextNumber={selectedNumber} textNumber={textNumber} selectCountry={selectCountry} setSelectCountry={selectedCountryNumber}/>
 {error && <Text style={{ fontWeight:"600", color:"red"}}>{error}</Text>}
 <View>
 <Button style={{margin:8, fontSize:32, gap:8}} onPress={sendCode}> 

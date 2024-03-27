@@ -6,6 +6,7 @@ import {
 import * as Network from 'expo-network';
 import { initializeApp } from 'firebase/app';
 import { Text } from 'react-native';
+import mobileAds from 'react-native-google-mobile-ads';
 import MaterialCommunityIcons
   from 'react-native-vector-icons/MaterialCommunityIcons';
 import { useDispatch } from 'react-redux';
@@ -46,7 +47,6 @@ import ReaderClubActions
   from './screens/CommunityScreens/ReaderClub/ReaderClubActions';
 import StatisticsScreen
   from './screens/CommunityScreens/StatisticsScreens/StatisticsScreen';
-import AboutUs from './screens/DrawerScreens/AboutUs';
 import LoginScreen from './screens/FormScreens/AuthorizationScreen/LoginScreen';
 import LoginWithPhoneScreen
   from './screens/FormScreens/AuthorizationScreen/LoginWithPhoneScreen';
@@ -98,6 +98,11 @@ import UsersProfile from './screens/singleScreens/UsersProfile';
 import YourStatistics from './screens/singleScreens/YourStatistics';
 import WelcomeScreen from './screens/WelcomingScreen/WelcomeScreen';
 
+mobileAds()
+  .initialize()
+  .then(adapterStatuses => {
+    // Initialization complete!
+  });
 const BottomNavigation = () => {
     const BottomTab = createMaterialBottomTabNavigator();
 const {user}=useAuthContext();
@@ -246,7 +251,6 @@ const isMember= documents.find((member)=>member.value.id === user.uid)
           fontSize:24,
         }, headerLeft:()=>{}}} component={BottomNavigation}/>
         <DrawerNav.Screen name="ContactScreen" component={Contact} />
-        <DrawerNav.Screen name='AboutUsScreen' component={AboutUs} />
         <DrawerNav.Screen options={{
           headerTitle:()=>(<Text style={{fontFamily:"OpenSans-Regular", fontSize:24, color:"white"}}>
            <Text style={{color:primeColor, fontSize:24, fontFamily:"OpenSans-Bold"}}>B</Text> 

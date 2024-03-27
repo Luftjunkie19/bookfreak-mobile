@@ -63,3 +63,4 @@ export const offerImages = [
   { src: thirdImage },
   { src: fifthImage },
 ];
+

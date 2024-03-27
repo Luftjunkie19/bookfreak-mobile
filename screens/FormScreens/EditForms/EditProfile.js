@@ -12,7 +12,11 @@ import {
   Text,
   View,
 } from 'react-native';
-import { CountryPicker } from 'react-native-country-codes-picker';
+import {
+  BannerAd,
+  BannerAdSize,
+  TestIds,
+} from 'react-native-google-mobile-ads';
 import { useSelector } from 'react-redux';
 
 import {
@@ -28,6 +32,8 @@ import { useTheme } from '@ui-kitten/components';
 import { accColor } from '../../../assets/ColorsImport';
 import alertMessages from '../../../assets/translations/AlertMessages.json';
 import translations from '../../../assets/translations/FormsTranslations.json';
+import CountryListSelection
+  from '../../../components/CountryList/CountryListSelection';
 import Loader from '../../../components/Loader';
 import { useAuthContext } from '../../../hooks/useAuthContext';
 import { useFormRealData } from '../../../hooks/useFormRealData';
@@ -37,6 +43,7 @@ import { useSelectPhoto } from '../../../hooks/useSelectPhoto';
 import { useSnackbarContext } from '../../../hooks/useSnackbarContext';
 import useStorage from '../../../hooks/useStorage';
 
+const adUnitId = __DEV__ ? TestIds.ADAPTIVE_BANNER : 'ca-app-pub-9822550861323688~6900348989';
 const EditProfile = () => {
   const {user}=useAuthContext();
   const {document}=useFormRealData('users', user.uid);
@@ -163,16 +170,19 @@ if(document){
 
 const theme=useTheme();
 
+
   return (
     <>
     <ScrollView style={{backgroundColor:theme['color-basic-800']}}>
 {document && <>
 <View style={{alignItems:"center", marginTop:24, gap:8}}>
   <Image source={{uri: photoURL ? photoURL : document.photoURL}} style={{width:170, height:170, borderRadius:100}}/>
-<Button onPress={selectSinglePhoto} icon={{name:"image", type:"material-community", color:"white"}} titleStyle={{fontFamily:'OpenSans-Bold'}} buttonStyle={{padding:6, margin:4, minWidth:250, maxWidth:300, backgroundColor:accColor}} radius='xl'>
+<Button onPress={selectSinglePhoto} icon={{name:"image", type:"material-community", color:"white"}} titleStyle={{fontFamily:'OpenSans-Bold'}} buttonStyle={{padding:6, margin:8, minWidth:250, maxWidth:300, backgroundColor:accColor}} radius='xl'>
   {translations.selectImgBtn.text[selectedLanguage]}
 </Button>
 </View>
+
+<BannerAd unitId={adUnitId} size={BannerAdSize.FULL_BANNER}/>
 
 <View style={{margin:6, gap:6}}>
 <Text style={{color:'white', fontFamily:'OpenSans-Bold'}}>{translations.userFields.nickname[selectedLanguage]}:</Text>
@@ -194,13 +204,11 @@ const theme=useTheme();
 {nationality &&
 <Image source={{uri: nationality.nationalityFlag}} style={{width:80, height:60, borderRadius:10}}/>
 }
-<Button onPress={()=>{
-  setOpenPicker(true);
-}} radius='md' icon={{name:"flag", type:"material-community", color:"white"}} buttonStyle={{backgroundColor:accColor}} titleStyle={{fontFamily:'OpenSans-Bold'}}>Select Country</Button>
-<CountryPicker style={{maxHeight:"90%"}} lang={selectedLanguage} show={openPicker} pickerButtonOnPress={(item)=>{
+
+<CountryListSelection selected={nationality} setSelected={(item)=>{
   setNationality({nationality:item.code, nationalityFlag:`https://flagcdn.com/h40/${item.code.toLowerCase()}.png`});
-  setOpenPicker(false);
-}} />
+  }}/>
+
 </View>
 </View>
 

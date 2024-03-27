@@ -37,7 +37,7 @@ const {dispatch}=useAuthContext();
 const {addToDataBase}=useRealDatabase();
     const [request, response, promiseAsync]=Google.useAuthRequest({
         iosClientId:"389109624627-oll9e8pnn3ocakfovf7em9es3ptdm141.apps.googleusercontent.com",
-        androidClientId:"389109624627-mdhqe24d8k23kuosov6kh745u04dfcfn.apps.googleusercontent.com"
+        androidClientId:"389109624627-vmla5g4htkbj88qo2lab9v19rqb6udlg.apps.googleusercontent.com"
       });
       const signInWithGoogle = async () => {
         setError(null);

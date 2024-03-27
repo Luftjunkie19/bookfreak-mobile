@@ -57,7 +57,7 @@ const selectedLanguage=useSelector((state)=>state.languageSelection.selectedLang
 
   const {id}=route.params;
   const {document}=useFormRealData('competitions', id);
-const [error, setError]=useState(null);
+  const [error, setError] = useState(null);
 const [isPending, setIsPending]=useState(false);
 const [title, setTitle]=useState(null);
 const [competitionsType, setCompetitionsType]=useState(null);
@@ -67,10 +67,14 @@ const {dispatch}=useSnackbarContext();
 const {updateDatabase}=useRealDatabase();
 useEffect(()=>{
   if(document){
-    setTitle(document.competitionTitle);
-    setCompetitionsType(document.competitionsName);
-    setExpirationTime(new Date(document.expiresAt));
-    setDescription(document.description);
+    if (document.createdBy.id === user.uid) {
+      setTitle(document.competitionTitle);
+      setCompetitionsType(document.competitionsName);
+      setExpirationTime(new Date(document.expiresAt));
+      setDescription(document.description);
+    } else {
+      navigation.navigate('HomeScreen');
+    }
   }
 },[document])
 
@@ -109,8 +113,8 @@ const theme=useTheme();
      {document && <>
 <View style={{margin:6, gap:6}}>
           <Text style={{ color: "white", fontFamily:"OpenSans-Bold" }}>{formTranslations.bookTitleInput.label[selectedLanguage]}:</Text>
-  <Input>
-  <InputField color='white' onChangeText={setTitle} value={title}/>
+  <Input variant='rounded'>
+  <InputField fontFamily='OpenSans-Regular' color='white' onChangeText={setTitle} value={title}/>
   </Input>
 </View>
 

@@ -73,13 +73,19 @@ const EditBook = ({route, navigation}) => {
 
   useEffect(() => {
     if (document) {
-      setTitle(document.title);
-      setAuthor(document.author);
-      setPagesNumber(document.pagesNumber);
-      setDescription(document.description);
-      setCategory(document.category);
-      setDateOfPublishing(document.dateOfPublishing);
-      setPublishingHouse(document.publishingHouse);
+      if(document.createdBy.id === user.uid){
+        setTitle(document.title);
+        setAuthor(document.author);
+        setPagesNumber(document.pagesNumber);
+        setDescription(document.description);
+        setCategory(document.category);
+        setDateOfPublishing(document.dateOfPublishing);
+        setPublishingHouse(document.publishingHouse);
+      } else {
+          navigation.navigate('BookScreen', {
+        id:id,
+      });
+      }
     }
   }, [document]);
 
@@ -143,35 +149,33 @@ const theme=useTheme();
 {document && <>
 <View style={{margin:8, gap:6}}>
 <Image source={{uri: photoURL ? photoURL : document.photoURL}} style={{width:180, height:180, borderRadius:100, alignSelf:"center"}}/>
-<Button onPress={selectSinglePhoto} icon={{name:"image", type:"material-community", color:"white"}} radius='xl' buttonStyle={{margin:8, minWidth:250, maxWidth:320, alignSelf:"center", backgroundColor:accColor}}>
+<Button titleStyle={{fontFamily:'OpenSans-Bold'}} onPress={selectSinglePhoto} icon={{name:"image", type:"material-community", color:"white"}} radius='xl' buttonStyle={{margin:8, minWidth:250, maxWidth:320, alignSelf:"center", backgroundColor:accColor}}>
   {translations.selectImgBtn.text[selectedLanguage]}
 </Button>
 </View>
 
 
 <View style={{margin:8, gap:6}}>
-  <Text style={{color:"white"}}>{translations.bookAuthorInput.label[selectedLanguage]}:</Text>
+  <Text style={{color:"white", fontFamily:'OpenSans-Regular'}}>{translations.bookAuthorInput.label[selectedLanguage]}:</Text>
 <Input borderRadius="$full">
-<InputField color='white' value={author} onChangeText={setAuthor}/>
+<InputField fontFamily='OpenSans-Regular' color='white' value={author} onChangeText={setAuthor}/>
 </Input>
 </View>
 
 <View style={{margin:8, gap:6}}>
-  <Text style={{color:"white"}}>{translations.bookTitleInput.label[selectedLanguage]}:</Text>
+  <Text style={{color:"white", fontFamily:'OpenSans-Regular'}}>{translations.bookTitleInput.label[selectedLanguage]}:</Text>
 <Input borderRadius="$full">
-<InputField color='white' value={title} onChangeText={setTitle}/>
+<InputField fontFamily='OpenSans-Regular' color='white' value={title} onChangeText={setTitle}/>
 </Input>
 </View>
 
 <View style={{margin:8, gap:6}}>
-  <Text style={{color:"white"}}>{translations.bookCategoryInput.label[selectedLanguage]}:</Text>
+  <Text style={{color:"white", fontFamily:'OpenSans-Regular'}}>{translations.bookCategoryInput.label[selectedLanguage]}:</Text>
   <Select>
     <SelectTrigger backgroundColor={accColor} android_ripple={{
       color:primeColor,
-      borderless:false,
-      radius:100
     }}>
-      <SelectInput color='white' value={category} />
+      <SelectInput color='white' value={category} fontSize={16} padding={4} fontFamily='OpenSans-Regular' />
       <SelectIcon>
         <Icon />
       </SelectIcon>
@@ -191,30 +195,30 @@ const theme=useTheme();
 </View>
 
 <View style={{margin:8, gap:6}}>
-  <Text style={{color:"white"}}>{translations.yearOfRelease[selectedLanguage]}:</Text>
+  <Text style={{color:"white", fontFamily:'OpenSans-Regular'}}>{translations.yearOfRelease[selectedLanguage]}:</Text>
 <Datepicker onSelect={(date)=>{
   setDateOfPublishing(new Date(date).getFullYear());
 }} min={new Date('0000-01-01')} max={new Date()} date={dateOfPublishing ? new Date(`${dateOfPublishing}-01-01`) : new Date()}/>
 </View>
 
 <View style={{margin:8, gap:6}}>
-  <Text style={{color:"white"}}>{translations.publisher[selectedLanguage]}:</Text>
+  <Text style={{color:"white", fontFamily:'OpenSans-Regular'}}>{translations.publisher[selectedLanguage]}:</Text>
 <Input borderRadius="$full">
-<InputField color='white' onChangeText={setPublishingHouse} value={publishingHouse}/>
+<InputField fontFamily='OpenSans-Regular' color='white' onChangeText={setPublishingHouse} value={publishingHouse}/>
 </Input>
 </View>
 
 <View style={{margin:8, gap:6}}>
-  <Text style={{color:"white"}}>{translations.pagesAmountInput.label[selectedLanguage]}:</Text>
+  <Text style={{color:"white", fontFamily:'OpenSans-Regular'}}>{translations.pagesAmountInput.label[selectedLanguage]}:</Text>
 <Input borderRadius="$full">
-<InputField color='white' onChangeText={(val)=>setPagesNumber(+val)} keyboardType='numeric' value={`${pagesNumber}`}/>
+<InputField fontFamily='OpenSans-Regular' color='white' onChangeText={(val)=>setPagesNumber(+val)} keyboardType='numeric' value={`${pagesNumber}`}/>
 </Input>
 </View>
 
 <View style={{margin:8, gap:6}}>
-  <Text style={{color:"white"}}>{translations.descriptionTextarea.label[selectedLanguage]}:</Text>
+  <Text style={{color:"white", fontFamily:'OpenSans-Regular'}}>{translations.descriptionTextarea.label[selectedLanguage]}:</Text>
 <Textarea borderRadius="$sm">
-<TextareaInput color='white' onChangeText={setDescription} value={description}/>
+<TextareaInput fontFamily='OpenSans-Regular' color='white' onChangeText={setDescription} value={description}/>
 </Textarea>
 </View>
 

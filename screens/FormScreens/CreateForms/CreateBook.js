@@ -9,6 +9,10 @@ import {
 } from 'react-native';
 import { CountryPicker } from 'react-native-country-codes-picker';
 import { SelectList } from 'react-native-dropdown-select-list';
+import {
+  AppOpenAd,
+  TestIds,
+} from 'react-native-google-mobile-ads';
 import { useSelector } from 'react-redux';
 
 import {
@@ -46,7 +50,11 @@ import { useSelectPhoto } from '../../../hooks/useSelectPhoto';
 import { useSnackbarContext } from '../../../hooks/useSnackbarContext';
 import useStorage from '../../../hooks/useStorage';
 
+const adUnitId = __DEV__ ? TestIds.APP_OPEN : 'ca-app-pub-9822550861323688~6900348989';
+
 const CreateBook = ({navigation}) => {
+  const appOpenAd = AppOpenAd.createForAdRequest(adUnitId);
+  
   const {user}=useAuthContext();
   const { documents:availableBooks } = useGetDocuments("books");
   const { documents } = useGetDocuments("bookReaders");
@@ -109,6 +117,7 @@ console.log(book);
           doc.countryOfRelease.toLowerCase().includes(book.countryOfRelease.toLowerCase())
         )
       ) {
+        setIsPending(false);
         dispatch({type:"SHOW_SNACKBAR", payload:{message:`${alertMessages.notifications.wrong.existsBook[selectedLanguage]}`, alertType:"error"}});
         setError(alertMessages.notifications.wrong.existsBook[selectedLanguage]);
         setLink(
@@ -123,17 +132,20 @@ console.log(book);
       }
 
       if(book.description.trim().length < 20){
+        setIsPending(false);
         dispatch({type:"SHOW_SNACKBAR", payload:{message:`${alertMessages.notifications.wrong.writeLonger[selectedLanguage]}`, alertType:"error"}});
         setError(alertMessages.notifications.wrong.writeLonger[selectedLanguage]);
         return
       }
 
       if(book.countryOfRelease.trim().length ===0 || !dateOfPublishing || !book.publishingHouse){
+        setIsPending(false);
         dispatch({type:"SHOW_SNACKBAR", payload:{message:`${alertMessages.notifications.wrong.someFieldsEmpty[selectedLanguage]}`, alertType:"error"}});
         return
       }
 
       if(!photoURL){
+        setIsPending(false);
         dispatch({type:"SHOW_SNACKBAR", payload:{message:`${alertMessages.notifications.wrong.bookCoverReq[selectedLanguage]}`, alertType:"error"}});
         return
       }
@@ -141,6 +153,7 @@ console.log(book);
       
 
       if(book.dateOfPublishing > new Date().getFullYear()){
+        setIsPending(false);
         dispatch({type:"SHOW_SNACKBAR", payload:{message:`${alertMessages.notifications.wrong.timeTraveler[selectedLanguage]}`, alertType:"error"}});
         return
       }
@@ -215,11 +228,15 @@ console.log(book);
 
       setIsPending(false);
       setError(null);
-
+      appOpenAd.load();
+      appOpenAd.show();
       navigation.navigate('HomeScreen');
     } catch (error) {
       console.log(error);
       setError(error.message);
+    }
+    finally{
+      setIsPending(false);
     }
   };
 
@@ -235,7 +252,7 @@ const theme=useTheme();
 
 <View style={{margin:6}}>
 <Text style={{color:"white", fontFamily:"Inter-Black"}}>{formTranslations.bookTitleInput.label[selectedLanguage]}</Text>
-<Input>
+<Input variant='rounded'>
 <InputField color="white" fontFamily='OpenSans-Regular' backgroundColor={modalAccColor} onChangeText={(text)=>{
   setBook({...book,title: text});
 }} placeholder={formTranslations.bookTitleInput.placeholder[selectedLanguage]}/>
@@ -245,7 +262,7 @@ const theme=useTheme();
 
 <View style={{margin:6,}}>
 <Text style={{color:"white", fontFamily:"Inter-Black"}}>{formTranslations.bookAuthorInput.label[selectedLanguage]}</Text>
-<Input>
+<Input variant='rounded'>
 <InputField color="white" fontFamily='OpenSans-Regular' backgroundColor={modalAccColor} onChangeText={(text)=>{
   setBook({...book,author: text});
 }} placeholder={formTranslations.bookAuthorInput.placeholder[selectedLanguage]}/>
@@ -261,7 +278,7 @@ const theme=useTheme();
 
 <View style={{margin:6}}>
 <Text style={{color:"white",fontFamily:"Inter-Black"}}>{formTranslations.pagesAmountInput.label[selectedLanguage]}</Text>
-<Input>
+<Input variant='rounded'>
 <InputField color="white" fontFamily='OpenSans-Regular' backgroundColor={modalAccColor} onChangeText={(text)=>{
   setBook({...book, pagesNumber: +text});
 }} placeholder={formTranslations.pagesAmountInput.placeholder[selectedLanguage]} keyboardType='numeric'/>
@@ -295,7 +312,7 @@ const theme=useTheme();
 
 <View style={{margin:6}}>
 <Text style={{color:"white",fontFamily:"Inter-Black"}}>{formTranslations.publisher[selectedLanguage]}</Text>
-<Input>
+<Input variant='rounded'>
 <InputField color="white" fontFamily='OpenSans-Regular' backgroundColor={modalAccColor} onChangeText={(value)=>{
   setBook({...book, publishingHouse: value})
 }} placeholder={formTranslations.publisher[selectedLanguage]} />

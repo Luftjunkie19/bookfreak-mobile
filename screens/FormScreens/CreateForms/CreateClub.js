@@ -7,6 +7,10 @@ import {
   View,
 } from 'react-native';
 import { MultipleSelectList } from 'react-native-dropdown-select-list';
+import {
+  AppOpenAd,
+  TestIds,
+} from 'react-native-google-mobile-ads';
 import { useSelector } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -36,7 +40,11 @@ import { useRealDatabase } from '../../../hooks/useRealDatabase';
 import { useSnackbarContext } from '../../../hooks/useSnackbarContext';
 import useStorage from '../../../hooks/useStorage';
 
+const adUnitId = __DEV__ ? TestIds.APP_OPEN : 'ca-app-pub-9822550861323688~6900348989';
+
 const CreateClub = () => {
+  const appOpenAd = AppOpenAd.createForAdRequest(adUnitId);
+
   const { user } = useAuthContext();
   const selectedLanguage = useSelector((state) => state.languageSelection.selectedLangugage);
   const { documents: users } = useGetDocuments('users');
@@ -101,15 +109,15 @@ const navigation=useNavigation();
           member.belongsTo.includes("readersClub")
       )
     ) {
+      setIsPending(false);
      dispatch({type:"SHOW_SNACKBAR", payload:{message:`${alertMessages.notifications.wrong.loyality[selectedLanguage]}`}});
-
       return;
     }
 
 
     if(!readersClub.clubLogo || readersClub.description.trim().length === 0 || readersClub.clubsName.trim().length === 0 || readersClub.requiredPagesRead === 0){
+      setIsPending(false);
       dispatch({type:"SHOW_SNACKBAR", payload:{message:`${alertMessages.notifications.wrong.someFieldsEmpty[selectedLanguage]}`}});
-
       return;
     }
 const uniqueId=`readersClub${uuidv4()}`;
@@ -168,6 +176,8 @@ const uniqueId=`readersClub${uuidv4()}`;
     setIsPending(false);
     dispatch({type:"SHOW_SNACKBAR", payload:{message:`${alertMessages.notifications.successfull.create[selectedLanguage]}`}});
     setError(null);
+    appOpenAd.load();
+    appOpenAd.show();
     navigation.navigate("HomePage");
   };
 
@@ -184,7 +194,7 @@ const uniqueId=`readersClub${uuidv4()}`;
 
       <View style={{ margin: 6 }}>
         <Text style={{fontFamily:'Inter-Black', color:"white"}}>{formTranslations.clubsNameInput.label[selectedLanguage]}:</Text>
-        <Input>
+        <Input variant='rounded'>
           <InputField fontFamily='OpenSans-Regular' backgroundColor={modalAccColor} fontSize={16} onChangeText={(value)=>setReadersClub({...readersClub, clubsName:value})} style={{ color:"white"}} placeholder={formTranslations.clubsNameInput.placeholder[selectedLanguage]} />
         </Input>
       </View>
@@ -211,7 +221,7 @@ const uniqueId=`readersClub${uuidv4()}`;
 
       <View style={{ margin: 6 }}>
         <Text style={{fontFamily:'Inter-Black', color:"white"}}>{formTranslations.requiredPagesToJoin.label[selectedLanguage]}:</Text>
-        <Input>
+        <Input variant='rounded'>
           <InputField fontFamily='OpenSans-Regular' backgroundColor={modalAccColor} fontSize={16} onChangeText={(value)=>setReadersClub({...readersClub, requiredPagesRead:+value })} style={{ color:"white"}} keyboardType="number-pad" placeholder={formTranslations.clubsNameInput.placeholder[selectedLanguage]} />
         </Input>
       </View>

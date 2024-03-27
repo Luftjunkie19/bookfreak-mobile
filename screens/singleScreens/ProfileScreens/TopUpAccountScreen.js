@@ -13,6 +13,13 @@ import MaterialCommunityIcons
 import { useSelector } from 'react-redux';
 
 import {
+  AlertDialog,
+  AlertDialogBackdrop,
+  AlertDialogBody,
+  AlertDialogCloseButton,
+  AlertDialogContent,
+  AlertDialogFooter,
+  AlertDialogHeader,
   Button,
   ButtonText,
   Input,
@@ -22,6 +29,7 @@ import { useTheme } from '@ui-kitten/components';
 
 import {
   accColor,
+  darkRed,
   modalAccColor,
   primeColor,
 } from '../../../assets/ColorsImport';
@@ -46,6 +54,7 @@ const TopUpAccountScreen = () => {
   const {document}=useGetDocument('users', user.uid);
 const selectedLanguage=useSelector((state)=>state.languageSelection.selectedLangugage);
   const scrollY=useSharedValue(0);
+  const [success, setSuccess]=useState(false);
   const createPayout = httpsCallable(functions, "createPayout");
   const { dispatch } = useSnackbarContext();
    const payoutAmount = async () => {
@@ -78,6 +87,7 @@ console.log(amountToPayout);
        }
     
       setAmountToPayout(0);
+      setSuccess(true);
       dispatch({type:"SHOW_SNACKBAR",payload:{message:translations.successfullyPaidOut[selectedLanguage], alertType:"success"}});
       setIsPending(false);
     } catch (err) {
@@ -87,19 +97,22 @@ console.log(amountToPayout);
   };
   return (
     <>
-    <View style={{backgroundColor:theme['color-basic-800'], flex:1}}>
+    <View  style={{backgroundColor:theme['color-basic-800'], flex:1}}>
       <Image source={require('../../../assets/moneyOption1.webp')} style={{width:140, height:140, alignSelf:"center"}}/>
-<Text style={{color:"white", fontFamily:"OpenSans-Bold", fontSize:20, textAlign:"center"}}>{translations.topText[selectedLanguage]}</Text>
-<Text style={{color:"white", fontFamily:"OpenSans-Regular", padding:3, alignSelf:"center"}}>{translations.downText[selectedLanguage]}</Text>
- <KeyboardAvoidingView behavior='position' style={{padding:6, gap:8}}>
-  <Text style={{color:"white", fontFamily:"OpenSans-Bold"}}>{formTranslations.payoutText[selectedLanguage]}:</Text>
-  <Input backgroundColor={modalAccColor}>
+<Text style={{color:"white", fontFamily:"OpenSans-Bold", fontSize:20, textAlign:"center", padding:4}}>{translations.topText[selectedLanguage]}</Text>
+<Text style={{color:"white", fontFamily:"OpenSans-Regular", padding:3, alignSelf:"center", padding:6}}>{translations.downText[selectedLanguage]}</Text>
+
+ <KeyboardAvoidingView behavior='position' style={{padding:6, gap:12}}>
+
+  <Text style={{color:"white", fontSize:16, fontFamily:"OpenSans-Bold"}}>{translations.yourCredits[selectedLanguage]}: <Text style={{color:"lightgreen", fontSize:20, fontFamily:"OpenSans-Bold"}}>{document && document.creditsAvailable.valueInMoney / 100} {document && document.creditsAvailable.currency.toUpperCase()}</Text></Text>
+  <Text style={{color:"white", fontFamily:"OpenSans-Bold", marginBottom:6}}> {formTranslations.payoutText[selectedLanguage]}:</Text>
+  <Input variant="rounded" backgroundColor={modalAccColor}>
   <InputField onChangeText={(value)=>{
     const convertedAmount = (+value) * 100;
     setAmountToPayout(convertedAmount);
   }} value={amountToPayout} keyboardType='numeric' maxWidth={250} fontFamily="OpenSans-Regular" color="white" />
   </Input>
-  <Button onPress={payoutAmount} gap={16} alignItems='center' justifyContent='center' android_ripple={{color:primeColor}} marginTop={16} marginHorizontal={8} backgroundColor={accColor}>
+  <Button rounded='$xl' onPress={payoutAmount} gap={16} alignItems='center' justifyContent='center' android_ripple={{color:primeColor}} marginTop={16} marginHorizontal={8} backgroundColor={accColor}>
           <ButtonText>{formTranslations.payoutText[selectedLanguage]}</ButtonText>
           <MaterialCommunityIcons name='cash-fast' size={20} color='white'/>
   </Button>
@@ -109,6 +122,29 @@ console.log(amountToPayout);
     console.log(nativeEvent.contentOffset.y);
     scrollY.value=nativeEvent.contentOffset.y;
   }} width={"100%"} pagingEnabled snapToInterval={200} maxHeight={400} contentContainerStyle={{gap:24, padding:8}} showsVerticalScrollIndicator={false} scrollEnabled data={allOffers} renderItem={({item, index})=><PaymentOption btnText={translations.buyBtnText[selectedLanguage]} scrollY={scrollY} index={index} data={item}/>}/>
+   
+   <AlertDialog isOpen={success}>
+    <AlertDialogBackdrop />
+    <AlertDialogContent bg={accColor} borderColor={primeColor} borderWidth={2}>
+      <AlertDialogHeader justifyContent='space-between' gap={4}>
+        <Text style={{fontFamily:"OpenSans-Bold", color:'lightgreen', fontSize:18}}>{translations.success[selectedLanguage]}</Text>
+        <AlertDialogCloseButton>
+          <Button gap={8} onPress={()=>setSuccess(false)} action='negative' ripple_android={{
+            color:darkRed
+          }}>
+            <ButtonText style={{fontFamily:"OpenSans-Regular"}}>Close</ButtonText>
+            <MaterialCommunityIcons name='close-circle' size={18} color='white'/>
+          </Button>
+        </AlertDialogCloseButton>
+      </AlertDialogHeader>
+      <AlertDialogBody>
+        <Text style={{fontFamily:"OpenSans-Bold", fontSize:18, color:"white"}}>
+{translations.successPayoutModal[selectedLanguage]}          
+        </Text>
+      </AlertDialogBody>
+      <AlertDialogFooter />
+    </AlertDialogContent>
+  </AlertDialog>
     </View>
   {isPending && <Loader/>}
     </>

@@ -7,6 +7,10 @@ import {
   View,
 } from 'react-native';
 import { MultipleSelectList } from 'react-native-dropdown-select-list';
+import {
+  AppOpenAd,
+  TestIds,
+} from 'react-native-google-mobile-ads';
 import { useSelector } from 'react-redux';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -47,7 +51,10 @@ import useGetDocuments from '../../../hooks/useGetDocuments';
 import { useRealDatabase } from '../../../hooks/useRealDatabase';
 import { useSnackbarContext } from '../../../hooks/useSnackbarContext';
 
+const adUnitId = __DEV__ ? TestIds.INTERSTITIAL : 'ca-app-pub-9822550861323688~6900348989';
+
 const CreateCompetition = ({navigation}) => {
+  const appOpenAd = AppOpenAd.createForAdRequest(adUnitId);
   const selectedLanguage=useSelector((state)=>state.languageSelection.selectedLangugage);
   const [competition, setCompetition] = useState({
     competitionTitle: "",
@@ -183,8 +190,7 @@ setInvitedUsers(invitedUsers);
         competition.prizeType === "Money" &&
         competition.prize.moneyPrize.amount === 0
       ) {
-        dispatch({type:"SHOW_SNACKBAR", payload:{message:`${alertMessages.notifications.wrong.zeroAmount[selectedLanguage]}`, alertType:"error"}});        
-        
+        dispatch({type:"SHOW_SNACKBAR", payload:{message:`${alertMessages.notifications.wrong.zeroAmount[selectedLanguage]}`, alertType:"error"}});          
         setIsPending(false);
         return;
       }
@@ -210,7 +216,7 @@ setInvitedUsers(invitedUsers);
         return;
       }
 
-      if (competition.prize.moneyPrize) {
+      if (competition.prize.moneyPrize.amount > 0) {
         const payoutObject = await payCompetitionCharge({
           organizatorObject: document,
           payerId: document.stripeAccountData.id,
@@ -254,6 +260,10 @@ setInvitedUsers(invitedUsers);
       }
       finalizeAll();
       setIsPending(false);
+      appOpenAd.load();
+      if(appOpenAd.loaded){
+        appOpenAd.show();
+      }
      navigation.goBack();
       dispatch({type:"SHOW_SNACKBAR", payload:{message:`${alertMessages.notifications.successfull.create[selectedLanguage]}`, alertType:"success"}});        
     } catch (err) {
@@ -274,7 +284,7 @@ setInvitedUsers(invitedUsers);
 
 <View style={{margin:6}}>
   <Text style={{fontFamily:"Inter-Black", color:"white"}}>{formTranslations.bookTitleInput.label[selectedLanguage]}</Text>
-  <Input>
+  <Input variant='rounded'>
   <InputField backgroundColor={modalAccColor} fontSize={16} fontFamily='OpenSans-Regular' color="white" onChangeText={(value)=>setCompetition({...competition, competitionTitle:value})}/>
   </Input>
 </View>
@@ -343,7 +353,7 @@ setInvitedUsers(invitedUsers);
 
 {competition.prizeType && competition.prizeType === "Money" && <View style={{margin:6}}>
   <Text style={{fontFamily:"Inter-Black", color:"white"}}>{formTranslations.prizeMoneyAmountInYourCurrency[selectedLanguage]}</Text>
-  <Input>
+  <Input variant='rounded'>
   <InputField fontFamily='OpenSans-Regular' color='white' backgroundColor={modalAccColor} onChangeText={(value)=>setCompetition({...competition, prize:{
     moneyPrize:{amount:+value * 100, currency:document.stripeAccountData.default_currency}
   }})} keyboardAppearance='dark' keyboardType='number-pad'/>

@@ -6,6 +6,11 @@ import {
   Text,
   View,
 } from 'react-native';
+import {
+  BannerAd,
+  BannerAdSize,
+  TestIds,
+} from 'react-native-google-mobile-ads';
 import { Searchbar } from 'react-native-paper';
 import { useSelector } from 'react-redux';
 
@@ -20,6 +25,7 @@ import Competition
 import ManagementBar from '../../../components/ManagmentBars/ManagementBar';
 import useGetDocuments from '../../../hooks/useGetDocuments';
 
+const adUnitId = __DEV__ ? TestIds.ADAPTIVE_BANNER : 'ca-app-pub-9822550861323688~6900348989';
 const Competitions = () => {
     const {documents}=useGetDocuments('competitions');
   const theme = useTheme();
@@ -117,7 +123,8 @@ const Competitions = () => {
   
     return (
     <View style={{backgroundColor:theme['color-basic-800'], flex:1}}>
-        <Searchbar placeholderTextColor="white" placeholder={competitionTranslations.competitionObject.competitionsName[selectedLanguage]} elevation={12} iconColor='white' inputStyle={{color:"white", fontFamily:"OpenSans-Regular"}} style={{margin:6, backgroundColor:accColor}} />
+        <Searchbar placeholderTextColor="white" placeholder={competitionTranslations.competitionObject.competitionsName[selectedLanguage]} elevation={12} iconColor='white' inputStyle={{color:"white", fontFamily:"OpenSans-Regular"}} style={{margin:12, backgroundColor:accColor}} />
+        <BannerAd unitId={adUnitId} size={BannerAdSize.FULL_BANNER}/>
 <ManagementBar selectFilter={addToFilters} removeFilter={removeFromFilters} selectedSorting={selectedSorting} selectedFilters={selectedFilters} selectSorting={selectSorting} sortings={sortOptions} filters={filterOptions} />
      {sortedArray().length === 0 && <View style={{alignSelf:"flex-start", gap:8}}>
         <LottieView autoPlay source={require('../../../assets/lottieAnimations/Animation - 1699294838586.json')} style={{width:150, height:300}} />

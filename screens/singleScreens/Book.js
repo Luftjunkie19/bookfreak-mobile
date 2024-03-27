@@ -9,6 +9,11 @@ import {
   Text,
   View,
 } from 'react-native';
+import {
+  BannerAd,
+  BannerAdSize,
+  TestIds,
+} from 'react-native-google-mobile-ads';
 import { FAB } from 'react-native-paper';
 import { useSelector } from 'react-redux';
 
@@ -47,6 +52,7 @@ import { useRealDatabase } from '../../hooks/useRealDatabase';
 import useRealtimeDocument from '../../hooks/useRealtimeDocument';
 import { useSnackbarContext } from '../../hooks/useSnackbarContext';
 
+const adUnitId = __DEV__ ? TestIds.ADAPTIVE_BANNER : 'ca-app-pub-9822550861323688~6900348989';
 const { getName } = require('country-list');
 const Book = ({route, navigation}) => {
   const {id}= route.params;
@@ -419,6 +425,8 @@ const {getDocument}=useRealtimeDocument();
   <Text style={{fontFamily:"Inter-Black", color:"white"}}>{reuseableTranslations.pagesText[selectedLanguage]}: {document.pagesNumber}</Text>
   <Text style={{fontFamily:"Inter-Black", color:"white"}}>{reuseableTranslations.releasedBy.part1[selectedLanguage]} {document.publishingHouse} {reuseableTranslations.releasedBy.part2[selectedLanguage]} {document.dateOfPublishing}</Text>
   <Text style={{fontFamily:"Inter-Black", color:"white"}}>{reuseableTranslations.publishingHouseCountry[selectedLanguage]}: {getName(document.countryOfRelease)}</Text>
+  
+
   <Accordion
   width="100%"
   variant="filled"
@@ -452,6 +460,7 @@ const {getDocument}=useRealtimeDocument();
     </AccordionContent>
   </AccordionItem>
 </Accordion>
+<BannerAd unitId={adUnitId} size={BannerAdSize.FULL_BANNER}/>
 </View>
 {document && readers && 
 

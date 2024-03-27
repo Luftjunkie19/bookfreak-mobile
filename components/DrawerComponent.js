@@ -1,4 +1,5 @@
 import React, {
+  useEffect,
   useRef,
   useState,
 } from 'react';
@@ -9,6 +10,11 @@ import {
   Text,
   View,
 } from 'react-native';
+import {
+  AdEventType,
+  InterstitialAd,
+  TestIds,
+} from 'react-native-google-mobile-ads';
 import MaterialCommunityIcons
   from 'react-native-vector-icons/MaterialCommunityIcons';
 import { useSelector } from 'react-redux';
@@ -40,6 +46,11 @@ import { useAuthContext } from '../hooks/useAuthContext';
 import useGetDocument from '../hooks/useGetDocument';
 import { useLogout } from '../hooks/useLogout';
 
+const adUnitId = __DEV__ ? TestIds.INTERSTITIAL : 'ca-app-pub-9822550861323688~6900348989';
+
+const interstitial = InterstitialAd.createForAdRequest(adUnitId);
+
+
 const DrawerComponent = (props) => {
 const {logout}=useLogout();
 const {user}=useAuthContext();
@@ -48,6 +59,23 @@ const animationValue = useRef(new Animated.Value(0)).current;
 const selectedLanguage=useSelector((state)=>state.languageSelection.selectedLangugage);
 const navigate=useNavigation();
 const {document}=useGetDocument('users',user.uid);
+
+const [loaded, setLoaded] = useState(false);
+
+useEffect(() => {
+  const unsubscribe = interstitial.addAdEventListener(AdEventType.LOADED, () => {
+    setLoaded(true);
+  });
+
+  // Start loading the interstitial straight away
+  interstitial.load();
+
+  // Unsubscribe from events on unmount
+  return unsubscribe;
+}, []);
+
+
+
 
 const toggleMenu = () => {
   setOpenedMenu(!openedMenu);
@@ -180,7 +208,10 @@ const animatedStyle = {
 <DrawerItem labelStyle={{
    fontSize:18,fontFamily:"Inter-Black",
   color:"white",
-}} icon={()=>(<IonIcons name="search" color="white" size={24}  />)} label={translations.hamburdeMenu.search[selectedLanguage]} onPress={()=>navigate.navigate('SearchOptions')}/>
+}} icon={()=>(<IonIcons name="search" color="white" size={24}  />)} label={translations.hamburdeMenu.search[selectedLanguage]} onPress={()=>{
+  navigate.navigate('SearchOptions');
+interstitial.show();
+}}/>
 
 
  </DrawerContentScrollView>

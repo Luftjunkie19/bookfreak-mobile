@@ -4,6 +4,10 @@ import {
   Text,
   View,
 } from 'react-native';
+import {
+  InterstitialAd,
+  TestIds,
+} from 'react-native-google-mobile-ads';
 
 import { Button } from '@rneui/themed';
 import { useTheme } from '@ui-kitten/components';
@@ -14,7 +18,13 @@ import useGetDocument from '../../../hooks/useGetDocument';
 import { useRealDatabase } from '../../../hooks/useRealDatabase';
 import { useSnackbarContext } from '../../../hooks/useSnackbarContext';
 
+const adUnitId = __DEV__ ? TestIds.INTERSTITIAL : 'ca-app-pub-9822550861323688~6900348989';
+
+const interstitial = InterstitialAd.createForAdRequest(adUnitId);
+
 const TestPlayScreen = ({route, navigation}) => {
+
+
   const alphabet = require('alphabet');
   const {testId, startTime, attemptId}=route.params;
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -63,6 +73,10 @@ const {user}=useAuthContext();
     setSelectedAnswer(null);
     setAccquiredPoints(0);
     setCurrentQuestion(0);
+    interstitial.load();
+    if(interstitial.loaded){
+      interstitial.show();
+    }
     navigation.goBack();
   };
 

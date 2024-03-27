@@ -21,7 +21,35 @@
     },
     "successfullyPaidOut":{
         "en": "Successfully paid out !",
-        "de": "Erfolgreich ausgezahlt !",
+        "de": "Erfolgreich ausgezahlt  !",
         "pl": "Udanie wypłacone !"
+    },
+"successPayoutModal":{
+"en":"Your credits should appear on your bank account up to 3 days",
+"de":"Deine Guthaben sollten bis zu 3 Tagen auf dein Bankkonto überwiesen werden",
+"pl":"Twoje środki powinny pojawić się na twoim koncie bankowym do 3 dni"
+},
+
+    "yourCredits":{
+        "en":"Your Credits",
+        "de":"Deine Guthaben",
+        "pl":"Twoje środki"
+    },
+    "success":{
+        "en":"Success !",
+        "de":"Erfolg !",
+        "pl":"Sukces !"
+    },
+    "creditsInformation":{
+        "part1":{
+            "en":"Your account will be topuped with amount of",
+            "de":"Dein Konto wird mit dem Betrag von",
+            "pl":"Twoje konto zostanie zasilone o"
+        },
+        "part2":{
+            "en":"up to 7 days",
+            "de":"bis maximal 7 Tage aufgeladen",
+            "pl":"do 7 dni"
+        }
     }
 }

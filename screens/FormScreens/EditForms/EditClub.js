@@ -51,9 +51,13 @@ const {uploadConvertedUri}=useStorage();
   const [requiredPagesRead, setRequiredPagesRead] = useState(0);
   useEffect(() => {
     if (document) {
-      setClubsName(document.clubsName);
-      setDescription(document.description);
-      setRequiredPagesRead(document.requiredPagesRead);
+      if (document.createdBy.id === user.uid) {
+        setClubsName(document.clubsName);
+        setDescription(document.description);
+        setRequiredPagesRead(document.requiredPagesRead);
+      } else {
+                navigation.navigate('HomeScreen');
+      }
     }
   }, [document]);
 

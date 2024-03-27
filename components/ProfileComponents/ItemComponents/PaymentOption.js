@@ -1,4 +1,7 @@
-import React, { useState } from 'react';
+import React, {
+  useEffect,
+  useState,
+} from 'react';
 
 import { httpsCallable } from 'firebase/functions';
 import {
@@ -6,12 +9,17 @@ import {
   Text,
   View,
 } from 'react-native';
+import {
+  InterstitialAd,
+  TestIds,
+} from 'react-native-google-mobile-ads';
 import Animated, {
   interpolate,
   useAnimatedStyle,
 } from 'react-native-reanimated';
 import MaterialCommunityIcons
   from 'react-native-vector-icons/MaterialCommunityIcons';
+import { useSelector } from 'react-redux';
 
 import {
   AlertDialog,
@@ -32,14 +40,22 @@ import {
   darkRed,
   primeColor,
 } from '../../../assets/ColorsImport';
+import translations
+  from '../../../assets/translations/TopupScreenTranslations.json';
 import { functions } from '../../../firebaseConfig';
 import { useAuthContext } from '../../../hooks/useAuthContext';
 import useGetDocument from '../../../hooks/useGetDocument';
 
+const adUnitId = __DEV__ ? TestIds.INTERSTITIAL : 'ca-app-pub-9822550861323688~6900348989';
+
+const interstitial = InterstitialAd.createForAdRequest(adUnitId);
 const PaymentOption = ({data, index, scrollY, btnText}) => {
 const [isLoading, setLoading]=useState(false);
+const selectedLanguage=useSelector((state)=>state.languageSelection.selectedLangugage);
+const [success, setSuccess]=useState(null);
+const [paymentClient, setPaymentClient]=useState(null);
 const [error, setError]=useState(null);
-const { initPaymentSheet, presentPaymentSheet } = useStripe();
+const { initPaymentSheet, presentPaymentSheet, retrievePaymentIntent } = useStripe();
   const createStripeMobileCheckout=httpsCallable(functions, 'createStripePaymentMobile');
 const {user}=useAuthContext();
 const theme=useTheme();
@@ -87,6 +103,8 @@ const animatedStyles=useAnimatedStyle(()=>{
       buyer,
       publishableKey,
     } = await fetchPaymentSheetParams();
+    
+    setPaymentClient(paymentIntent);
 
     const { error } = await initPaymentSheet({
       appearance:{
@@ -139,6 +157,32 @@ placeholderText:"#ffffff"
   }
 
  
+  const managePaymentClient= async ()=>{
+    if(paymentClient){
+  
+    const {error, paymentIntent}= await retrievePaymentIntent(paymentClient);
+  
+  
+  
+  if(error){
+    setError(error.message);
+    return;
+  }
+  
+  if(paymentIntent.status === 'Succeeded'){
+    setSuccess({amount:paymentIntent.amount, currency:paymentIntent.currency});
+  }
+      }
+    else {
+      console.log(paymentClient);
+      }
+  }
+  
+  useEffect(()=>{
+
+managePaymentClient();
+
+  },[paymentClient])
 
   return (
     <Animated.View style={[{backgroundColor:accColor, borderRadius:8}, animatedStyles]}>
@@ -154,6 +198,33 @@ placeholderText:"#ffffff"
   <ButtonText>{btnText}</ButtonText>
 </Button>
       </View>
+
+
+      <AlertDialog isOpen={success !== null}>
+    <AlertDialogBackdrop />
+    <AlertDialogContent bg={accColor} borderColor={primeColor} borderWidth={2}>
+      <AlertDialogHeader justifyContent='space-between' gap={4}>
+        <Text style={{fontFamily:"OpenSans-Bold", color:"lightgreen", fontSize:18}}>{translations.success[selectedLanguage]}</Text>
+        <AlertDialogCloseButton>
+          <Button gap={8} onPress={()=>setSuccess(null)} action='negative' ripple_android={{
+            color:darkRed
+          }}>
+            <ButtonText style={{fontFamily:"OpenSans-Regular"}}>Close</ButtonText>
+            <MaterialCommunityIcons name='close-circle' size={18} color='white'/>
+          </Button>
+        </AlertDialogCloseButton>
+      </AlertDialogHeader>
+      <AlertDialogBody>
+        <Text style={{fontFamily:"OpenSans-Bold", fontSize:18, color:"white"}}>
+  
+          
+{translations.creditsInformation.part1[selectedLanguage]} {success && success.amount / 100} {success && success.currency} {translations.creditsInformation.part2[selectedLanguage]}
+          
+        </Text>
+      </AlertDialogBody>
+      <AlertDialogFooter />
+    </AlertDialogContent>
+  </AlertDialog>
 
       <AlertDialog isOpen={error !== null}>
     <AlertDialogBackdrop />

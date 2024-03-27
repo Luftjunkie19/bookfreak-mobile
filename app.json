@@ -2,7 +2,7 @@
   "expo": {
     "name": "BookFreak Mobile",
     "slug": "bookfreak-mobile",
-    "version": "1.0.1",
+    "version": "1.0.4",
     "orientation": "portrait",
     "icon": "./assets/Logo.png",
     "userInterfaceStyle": "light",
@@ -16,7 +16,7 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "googleServicesFile": "./GoogleService-Info (2).plist",
+      "googleServicesFile": "./GoogleService-Info (5).plist",
       "bundleIdentifier": "com.bookfreak.org",
       "entitlements": {
         "com.apple.developer.networking.wifi-info": true
@@ -30,12 +30,15 @@
             "SKAdNetworkIdentifier": "n38lu8286q.skadnetwork"
           }
         ]
+      },
+      "runtimeVersion": {
+        "policy": "appVersion"
       }
     },
     "android": {
-      "googleServicesFile": "./google-services (6).json",
+      "googleServicesFile": "./google-services (11).json",
       "package": "com.bookfreak.org",
-      "versionCode": 2,
+      "versionCode": 5,
       "adaptiveIcon": {
         "foregroundImage": "./assets/Logo.png",
         "backgroundColor": "#ffffff"
@@ -43,7 +46,8 @@
       "permissions": [
         "android.permission.RECORD_AUDIO",
         "android.permission.INTERNET"
-      ]
+      ],
+      "runtimeVersion": "1.0.0"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -57,14 +61,14 @@
         "expo-build-properties",
         {
           "ios": {
-                "useFrameworks": "static"
-            }
+            "useFrameworks": "static"
           }
-        ],
-        [
-          "react-native-fbsdk-next",
-          {
-            "appID": "917699232752922",
+        }
+      ],
+      [
+        "react-native-fbsdk-next",
+        {
+          "appID": "917699232752922",
           "clientToken": "cce642d3330f1ecb6bc6932715d7b589",
           "displayName": "Bookfreak",
           "scheme": "fb917699232752922"
@@ -90,6 +94,13 @@
         "projectId": "1f2875fc-ed51-4311-9100-2e8053aabdb8"
       }
     },
-    "owner": "luftjunkie_19"
+    "owner": "luftjunkie_19",
+    "updates": {
+      "url": "https://u.expo.dev/1f2875fc-ed51-4311-9100-2e8053aabdb8"
+    }
+  },
+  "react-native-google-mobile-ads": {
+    "android_app_id": "ca-app-pub-9822550861323688~6900348989",
+    "ios_app_id": "ca-app-pub-9822550861323688~6900348989"
   }
 }

@@ -103,7 +103,7 @@ const getVerificationError=(value)=>{
 }
 
 const approveData= async ()=>{
- await sendVerificationCode(textNumber,country.dial_code, verifyRef.current, setVerificationID, getVerificationError);
+ await sendVerificationCode(textNumber,country.phone, verifyRef.current, setVerificationID, getVerificationError);
 };
 
 const approveCode= async ()=>{
@@ -159,7 +159,7 @@ const pickImageAsync = async () => {
         {image && <Image source={{uri:image}} style={{width:70, height:70}} />}
     <Button style={{color:"white", fontFamily:"OpenSans-Bold", margin:4}} onPress={pickImageAsync}>{translations.selectImgBtn.text[selectedLanguage]}</Button>
       </View>
-  <CountryPhoneInput validation={validate}  setCountry={selectedCountry} country={country} setTextNumber={selectedNumber} textNumber={textNumber} selectCountry={selectCountry} setSelectCountry={selectedCountryNumber}/>
+  <CountryPhoneInput validation={validate}  select={selectedCountry} country={country} setTextNumber={selectedNumber} textNumber={textNumber} selectCountry={selectCountry} setSelectCountry={selectedCountryNumber}/>
 <View>
 <Button style={{margin:8, fontSize:32}} onPress={approveData}> 
 {translations.submit[selectedLanguage]}

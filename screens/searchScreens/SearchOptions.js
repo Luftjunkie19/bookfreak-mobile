@@ -1,6 +1,7 @@
 import React from 'react';
 
 import {
+  Dimensions,
   Text,
   View,
 } from 'react-native';
@@ -23,12 +24,12 @@ const SearchOptions = ({navigation}) => {
 <Text style={{
    fontSize:24,fontFamily:"Inter-Black", color:"white"
 }}>{translations.title[selectedLanguage]}</Text>
-<View style={{ gap:24, flexWrap:"wrap"}}>
+<View style={{ gap:24, flexDirection:"row"}}>
 <Button onPress={()=>{
   navigation.navigate("SearchedChoice", {
     collection:"users"
   })
-}} iconPosition='top' titleStyle={{fontFamily:"Inter-Black"}} buttonStyle={{paddingHorizontal:42, paddingVertical:42, borderRadius:8,  backgroundColor:accColor}} icon={{type:"material-community", name:"account-multiple", color:"white", size:32}}>
+}} iconPosition='top' titleStyle={{fontFamily:"OpenSans-Bold", fontSize:16}} buttonStyle={{paddingHorizontal:42, paddingVertical:42, borderRadius:8,  backgroundColor:accColor, minWidth:Dimensions.get('screen').width /2.5}} icon={{type:"material-community", name:"account-multiple", color:"white", size:32}}>
 {translations.options.users[selectedLanguage]}
 </Button>
 
@@ -36,7 +37,7 @@ const SearchOptions = ({navigation}) => {
   navigation.navigate("SearchedChoice", {
     collection:"books"
   })
-}} iconPosition='top' titleStyle={{fontFamily:"Inter-Black"}}  buttonStyle={{paddingHorizontal:42, paddingVertical:42, borderRadius:8, backgroundColor:accColor}} icon={{type:"material-community", name:"book-multiple", color:"white", size:32}}>
+}} iconPosition='top' titleStyle={{fontFamily:"OpenSans-Bold", fontSize:16}}  buttonStyle={{paddingHorizontal:42, paddingVertical:42, borderRadius:8, backgroundColor:accColor, minWidth:Dimensions.get('screen').width /2.5}} icon={{type:"material-community", name:"book-multiple", color:"white", size:32}}>
 {translations.options.books[selectedLanguage]}
 </Button>
 
