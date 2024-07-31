@@ -16,11 +16,8 @@ web-build/
 *.key
 *.mobileprovision
 .env
-android
-ios
-firebaseConfig.js
-GoogleService-Info.*
-metro.config.js
+android/
+ios/
 
 # Metro
 .metro-health-check*
