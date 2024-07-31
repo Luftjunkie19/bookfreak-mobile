@@ -33,7 +33,7 @@ export const allOffers = [
   },
   {
     name: "9.99$ Credits ",
-    id: "price_1OTNwmL8z1e5mvb6LkqrtyHx",
+    id: "price_1P99iDL8z1e5mvb6NrWqNYlj",
     price: 9.99,
     bucksToToUp: 999,
   },

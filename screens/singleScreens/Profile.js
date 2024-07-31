@@ -239,16 +239,21 @@ useDerivedValue(() => {
       }
           
 <View style={{margin:2}}>
- <View>
-  <Text style={{fontFamily:"OpenSans-Bold", color:"white", fontSize:20}}>{profileTranslations.availableText[selectedLanguage]}</Text>
-              {document.creditsAvailable.balance.map((itemBalance) => (<Text style={{fontFamily:"OpenSans-Bold", color:"white", fontSize:16}}>{itemBalance.amount / 100}<Text style={{color:"lightgreen"}}>
-                {itemBalance.currency.toUpperCase()}
-              </Text>
-              </Text>))}  
+            <View>
+              {document.creditsAvailable.balance &&
+              <>
+              <Text style={{fontFamily:"OpenSans-Bold", color:"white", fontSize:20}}>{profileTranslations.availableText[selectedLanguage]}</Text>
+                          {document.creditsAvailable.balance.map((itemBalance) => (<Text style={{fontFamily:"OpenSans-Bold", color:"white", fontSize:16}}>{itemBalance.amount / 100}<Text style={{color:"lightgreen"}}>
+                            {itemBalance.currency.toUpperCase()}
+                          </Text>
+                          </Text>))}  
+              </>
+              }
+              
 
 {balanceObject && <View>
               <Text style={{fontFamily:"OpenSans-Bold", color:"white", fontSize:20}}>{profileTranslations.pendingText[selectedLanguage]}</Text>
-                  {balanceObject.pending.map((itemBalance) => (<Text style={{fontFamily:"OpenSans-Bold", color:"white", fontSize:16}}>{itemBalance.amount/100} <Text style={{ color:"lightgreen"}}>
+                  {balanceObject.pending.map((itemBalance) => (<Text style={{fontFamily:"OpenSans-Bold", color:"white", fontSize:16}}>{itemBalance.amount / 100} <Text style={{ color:"lightgreen"}}>
                 {itemBalance.currency.toUpperCase()}
               </Text>
               </Text>))}

@@ -10,12 +10,21 @@
       },
       "ios": {
         "buildConfiguration": "Debug"
-      }
+      },
+      "channel": "development"
     },
     "preview": {
-      "distribution": "internal"
+      "distribution": "internal",
+      "channel": "preview"
     },
-    "production": {}
+    "production": {
+      "android": {
+        "buildType": "apk"
+      },
+       "credentialsSource": "remote",
+  "distribution": "store",
+      "channel": "production"
+    }
   },
   "submit": {
     "production": {}

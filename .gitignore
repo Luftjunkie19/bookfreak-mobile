@@ -16,8 +16,17 @@ web-build/
 *.key
 *.mobileprovision
 .env
+android
+ios
+firebaseConfig.js
+GoogleService-Info.*
+metro.config.js
+
 # Metro
 .metro-health-check*
+*.plist
+google-services*.json
+bookfreak-*.json
 
 # debug
 npm-debug.*

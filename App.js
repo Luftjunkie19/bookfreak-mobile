@@ -1,5 +1,6 @@
 import 'react-native-gesture-handler';
 import 'expo-dev-client';
+import { register } from "@videosdk.live/react-native-sdk";
 
 import { useCallback } from 'react';
 
@@ -22,7 +23,7 @@ import AuthContextProvider from './context/AuthContext';
 import { SnackBarProvider } from './context/SnackbarCxt';
 import stored from './context/Stored';
 import ScreenContainer from './ScreenContainer';
-
+register();
 SplashScreen.preventAutoHideAsync();
 export default function App() {
   const [fontsLoaded] = useFonts({

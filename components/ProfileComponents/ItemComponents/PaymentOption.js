@@ -9,10 +9,7 @@ import {
   Text,
   View,
 } from 'react-native';
-import {
-  InterstitialAd,
-  TestIds,
-} from 'react-native-google-mobile-ads';
+import { InterstitialAd } from 'react-native-google-mobile-ads';
 import Animated, {
   interpolate,
   useAnimatedStyle,
@@ -46,7 +43,7 @@ import { functions } from '../../../firebaseConfig';
 import { useAuthContext } from '../../../hooks/useAuthContext';
 import useGetDocument from '../../../hooks/useGetDocument';
 
-const adUnitId = __DEV__ ? TestIds.INTERSTITIAL : 'ca-app-pub-9822550861323688~6900348989';
+const adUnitId = 'ca-app-pub-9822550861323688/7367380129';
 
 const interstitial = InterstitialAd.createForAdRequest(adUnitId);
 const PaymentOption = ({data, index, scrollY, btnText}) => {

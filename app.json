@@ -2,9 +2,10 @@
   "expo": {
     "name": "BookFreak Mobile",
     "slug": "bookfreak-mobile",
-    "version": "1.0.5",
+    "version": "1.0.9",
     "orientation": "portrait",
     "icon": "./assets/Logo.png",
+
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/GB-mcOkXgAAd99_-removebg-preview.png",
@@ -18,6 +19,7 @@
       "supportsTablet": true,
       "googleServicesFile": "./GoogleService-Info (5).plist",
       "bundleIdentifier": "com.bookfreak.org",
+     
       "entitlements": {
         "com.apple.developer.networking.wifi-info": true
       },
@@ -35,10 +37,12 @@
         "policy": "appVersion"
       }
     },
+   
     "android": {
-      "googleServicesFile": "./google-services (11).json",
+
+      "googleServicesFile": "./google-services.json",
       "package": "com.bookfreak.org",
-      "versionCode": 6,
+      "versionCode": 10,
       "adaptiveIcon": {
         "foregroundImage": "./assets/Logo.png",
         "backgroundColor": "#ffffff"
@@ -50,6 +54,7 @@
       "runtimeVersion": "1.0.0"
     },
     "web": {
+      "bundler": "metro",
       "favicon": "./assets/favicon.png"
     },
     "scheme": "bookfreak-mobile",
@@ -87,7 +92,16 @@
         }
       ],
       "expo-localization",
-      "react-native-fbsdk-next"
+      "react-native-fbsdk-next",
+      "@videosdk.live/expo-config-plugin",
+      [
+        "@config-plugins/react-native-webrtc",
+        {
+          "cameraPermission": "Allow $(PRODUCT_NAME) to access your camera",
+          "microphonePermission": "Allow $(PRODUCT_NAME) to access your microphone"
+        }
+      ],
+      "expo-router"
     ],
     "extra": {
       "eas": {

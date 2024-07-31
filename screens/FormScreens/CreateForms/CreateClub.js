@@ -37,7 +37,7 @@ import { useRealDatabase } from '../../../hooks/useRealDatabase';
 import { useSnackbarContext } from '../../../hooks/useSnackbarContext';
 import useStorage from '../../../hooks/useStorage';
 
-const adUnitId = 'ca-app-pub-9822550861323688~6900348989';
+const adUnitId = 'ca-app-pub-9822550861323688/3794649396';
 
 const CreateClub = () => {
   const appOpenAd = AppOpenAd.createForAdRequest(adUnitId);

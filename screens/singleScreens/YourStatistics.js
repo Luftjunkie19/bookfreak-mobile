@@ -22,7 +22,7 @@ import PieChart from '../../components/ProfileComponents/charts/PieChart';
 import { useAuthContext } from '../../hooks/useAuthContext';
 import useGetDocuments from '../../hooks/useGetDocuments';
 
-const adUnitId = 'ca-app-pub-9822550861323688~6900348989';
+const adUnitId = 'ca-app-pub-9822550861323688/3794649396';
 
 const YourStatistics = () => {
 const {user}=useAuthContext();

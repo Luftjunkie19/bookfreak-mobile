@@ -25,7 +25,7 @@ import { useAuthContext } from '../../hooks/useAuthContext';
 import useGetDocuments from '../../hooks/useGetDocuments';
 import SearchedItem from './searchedItems/SearchedItem';
 
-const adUnitId= 'ca-app-pub-9822550861323688~6900348989';
+const adUnitId= 'ca-app-pub-9822550861323688/3794649396';
 
 const SearchedChoice = ({route, navigation}) => {
   const {collection}=route.params;

@@ -15,7 +15,7 @@ import useGetDocument from '../../../hooks/useGetDocument';
 import { useRealDatabase } from '../../../hooks/useRealDatabase';
 import { useSnackbarContext } from '../../../hooks/useSnackbarContext';
 
-const adUnitId = 'ca-app-pub-9822550861323688~6900348989';
+const adUnitId = 'ca-app-pub-9822550861323688/7367380129';
 
 const interstitial = InterstitialAd.createForAdRequest(adUnitId);
 

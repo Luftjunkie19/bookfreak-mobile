@@ -1,6 +1,11 @@
 <resources>
-  <color name="splashscreen_background">#4267B5</color>
+  <item name="orange" type="color">#FF4500
+    </item>
+  <integer-array name="androidcolors">
+    <item>@color/orange</item>
+  </integer-array>
   <color name="iconBackground">#ffffff</color>
   <color name="colorPrimary">#023c69</color>
   <color name="colorPrimaryDark">#4267B5</color>
+  <color name="splashscreen_background">#4267B5</color>
 </resources>

@@ -51,7 +51,7 @@ import { useRealDatabase } from '../../hooks/useRealDatabase';
 import useRealtimeDocument from '../../hooks/useRealtimeDocument';
 import { useSnackbarContext } from '../../hooks/useSnackbarContext';
 
-const adUnitId =  'ca-app-pub-9822550861323688~6900348989';
+const adUnitId =  'ca-app-pub-9822550861323688/3794649396';
 const { getName } = require('country-list');
 const Book = ({route, navigation}) => {
   const {id}= route.params;

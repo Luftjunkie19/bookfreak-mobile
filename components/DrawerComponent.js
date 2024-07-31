@@ -45,7 +45,7 @@ import { useAuthContext } from '../hooks/useAuthContext';
 import useGetDocument from '../hooks/useGetDocument';
 import { useLogout } from '../hooks/useLogout';
 
-const adUnitId ='ca-app-pub-9822550861323688~6900348989';
+const adUnitId ='ca-app-pub-9822550861323688/7367380129';
 
 const interstitial = InterstitialAd.createForAdRequest(adUnitId);
 

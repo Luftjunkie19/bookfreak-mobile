@@ -24,7 +24,7 @@ import Club from '../../../components/CommunityScreensComponents/Club';
 import ManagementBar from '../../../components/ManagmentBars/ManagementBar';
 import useGetDocuments from '../../../hooks/useGetDocuments';
 
-const adUnitId = 'ca-app-pub-9822550861323688~6900348989';
+const adUnitId = 'ca-app-pub-9822550861323688/3794649396';
 const ReaderClubs = () => {
     const {documents}=useGetDocuments('readersClubs');
   const theme = useTheme();
