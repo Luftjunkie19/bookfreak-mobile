@@ -90,7 +90,7 @@
         {
           "enableGooglePay": true
         }
-      ],
+      ], 
       "expo-localization",
       "react-native-fbsdk-next",
       "@videosdk.live/expo-config-plugin",

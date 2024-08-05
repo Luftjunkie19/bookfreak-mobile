@@ -18,9 +18,7 @@
       "channel": "preview"
     },
     "production": {
-      "android": {
-        "buildType": "apk"
-      },
+     
        "credentialsSource": "remote",
   "distribution": "store",
       "channel": "production"
