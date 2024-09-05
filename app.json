@@ -5,7 +5,9 @@
     "version": "1.0.9",
     "orientation": "portrait",
     "icon": "./assets/Logo.png",
-
+    "experiments": {
+      "tsconfigPaths": true
+    },
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/GB-mcOkXgAAd99_-removebg-preview.png",

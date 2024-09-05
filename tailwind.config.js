@@ -12,6 +12,7 @@ module.exports = {
     extend: {
       fontFamily: {
         interBlack: ["Inter-Black"],
+        poppins:['Poppins']
       },
       colors: {
         bgColor: "rgb(0,0,0)",
